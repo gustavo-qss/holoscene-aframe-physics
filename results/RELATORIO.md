@@ -27,6 +27,12 @@ sem retrabalho, para simulação física interativa**.
 Encontrei também um **defeito na biblioteca de física** que quebra silenciosamente a
 integração; está documentado na seção 6 com a correção aplicada.
 
+A seção 8 examina os arquivos USD da mesma saída, que trazem esquemas `UsdPhysics`. Eles
+confirmam de forma independente a divisão estático/dinâmico, a orientação e a colocação dos
+objetos, mas **têm massa, densidade e inércia zeradas**. O mais revelador é que pedem
+`approximation = "sdf"`: **o próprio HoloScene não espera que seus objetos sejam simulados
+como sólidos convexos** — o que corrobora o diagnóstico acima.
+
 ---
 
 ## 1. Ambiente e versões
@@ -461,7 +467,106 @@ efeito colateral, não uma solução.
 
 ---
 
-## 8. Limitações
+## 8. E se tivéssemos usado os USD em vez dos OBJ?
+
+A saída do HoloScene também traz `usd/obj_0..27.usd` (e os `.usdz` equivalentes), que não
+foram usados na avaliação principal. Como o formato USD suporta os esquemas **UsdPhysics**,
+é legítimo perguntar se eles teriam sido a fonte melhor para a física. Verifiquei.
+
+Script: [`scripts/07_usd_physics.py`](../scripts/07_usd_physics.py) ·
+dados: [`usd_physics.csv`](usd_physics.csv), [`usd_physics.json`](usd_physics.json).
+
+### 8.1 Os USD declaram física — e isso é real
+
+Os 28 arquivos são USDC binários, e **todos** trazem esquemas de física aplicados:
+
+| Prim | Esquemas aplicados |
+|---|---|
+| `obj_0` (fundo) | `PhysicsCollisionAPI`, `PhysicsMeshCollisionAPI`, `PhysicsMaterialAPI` |
+| `obj_1..27` (objetos) | as anteriores **+** `PhysicsRigidBodyAPI`, `PhysicsMassAPI` |
+
+Isso é informação que o OBJ não tem, e ela **confirma independentemente três decisões** que na
+avaliação principal eu tive de inferir:
+
+1. **A divisão estático/dinâmico.** O fundo recebe apenas colisão, sem `RigidBodyAPI`; os 27
+   objetos recebem corpo rígido. É exatamente a divisão adotada na seção 5.2.
+2. **A orientação e a colocação.** Cada prim traz `xformOp:rotateX:tilt` + `xformOp:translate`,
+   ou seja, a conversão Z-up → Y-up e a posição na cena já vêm resolvidas. O palco USD declara
+   `upAxis = Y`.
+3. **O tipo de colisor pretendido:** `physics:approximation = "sdf"` nos 28.
+
+**Validação cruzada da colocação.** Comparei o `xformOp:translate` de cada USD com a `position`
+que derivei do OBJ (centro da caixa envolvente), dividida pelo fator de escala adotado:
+delta mediano de **0,0015 unidades** e máximo de 0,0148 (1,1 cm e 10,5 cm métricos). A
+concordância confirma que OBJ e USD estão no mesmo referencial e que a derivação de
+posicionamento da seção 5.2 está correta — o resíduo é a diferença entre o pivô do USD e o
+centro da caixa envolvente.
+
+### 8.2 Mas os valores de física não estão preenchidos
+
+Os esquemas estão **aplicados**, os atributos **não estão autorados**. Valores lidos de
+`usd/obj_5.usd`, representativos dos 27 objetos:
+
+| Atributo | Valor | Leitura |
+|---|---|---|
+| `physics:mass` | `0.0` | **zerado nos 27** |
+| `physics:density` | `0.0` | zerado nos 28 |
+| `physics:diagonalInertia` | `[0, 0, 0]` | zerado |
+| `physics:centerOfMass` | `[-inf, -inf, -inf]` | sentinela de “não definido” |
+| `physics:principalAxes` | `(0, 0, 0, 0)` | quatérnio inválido |
+| `physics:staticFriction` / `dynamicFriction` | `1.0e+20` | sentinela de “não definido” |
+| `physics:restitution` | `0.0` | — |
+| `physics:rigidBodyEnabled` | `1.0` | — |
+
+Ou seja: **o modelo de massa da seção 5.3 continuaria sendo necessário**. O HoloScene estima
+propriedades físicas internamente, mas o que chega ao USD são apenas os *slots* dos esquemas,
+sem os números. A afirmação da seção 5.3 — “o HoloScene não exporta massa” — se sustenta, e
+agora com evidência direta em vez de inferência a partir da ausência no OBJ.
+
+A escala também não se resolve: o palco declara `metersPerUnit = 0.01` (centímetros), mas a
+geometria tem os mesmos valores do OBJ (fundo com 1,698 × 1,513 × 0,516). Tomado ao pé da
+letra, o pé-direito mediria meio centímetro. O `metersPerUnit` é o padrão do exportador, não
+uma medição — **nenhum arquivo entregue carrega a escala métrica verdadeira**, como concluído
+na seção 3.3.
+
+### 8.3 `approximation = "sdf"`: o colisor certo, indisponível na web
+
+O achado mais interessante é que o HoloScene pede **colisão por campo de distância com sinal
+(SDF)** para todos os 28 prims. SDF é justamente o tipo de colisor que resolveria o problema
+central da seção 7.3: ele representa geometria **côncava** em corpo dinâmico, sem a
+aproximação convexa que faz as almofadas se interpenetrarem com o sofá.
+
+O problema é de disponibilidade. Colisores SDF existem no **NVIDIA PhysX 5** (e portanto no
+Isaac Sim / Omniverse, que é claramente o alvo desse export). **Nenhum motor de física para
+web os oferece** — nem Ammo/Bullet, nem Cannon, nem Rapier. Também não há carregador de USD
+utilizável no A-Frame: o `USDZLoader` do three.js é experimental e lê apenas geometria e
+material, ignorando os esquemas de física.
+
+### 8.4 Resposta
+
+Para o alvo desta avaliação — uma aplicação **web** com A-Frame — usar os USD **não teria
+mudado o resultado**, por três razões:
+
+1. A geometria é a mesma (mesmas contagens de vértices e faces dos OBJ correspondentes), então
+   o colapso da seção 7.3 aconteceria igual: ele é consequência da aproximação convexa, e o
+   USD não traz convexidade nenhuma de brinde.
+2. As propriedades físicas estão zeradas, então o modelo de massa inventado continuaria necessário.
+3. Não há caminho de carregamento de USD para o navegador; seria preciso converter para glTF
+   de qualquer forma, descartando os esquemas de física no caminho.
+
+Os USD **teriam economizado trabalho** em três pontos — a rotação Z-up → Y-up, a colocação dos
+objetos e a decisão estático/dinâmico já vêm declaradas — e, como mostrado em 8.1, servem
+muito bem como **validação independente** dessas três inferências. Esse é o uso correto deles
+neste trabalho, e é como estão sendo usados agora.
+
+O ponto mais valioso, porém, é o `approximation = "sdf"`: ele revela que **o próprio HoloScene
+não espera que seus objetos sejam simulados como sólidos convexos**. Isso reforça, vindo do
+autor do dataset, o diagnóstico da seção 7.3 — e explica por que a cena é fisicamente coerente
+em PhysX e colapsa em Ammo.
+
+---
+
+## 9. Limitações
 
 1. **A escala métrica é uma suposição.** O fator 7,13078 vem de assumir pé-direito de 2,7 m.
    Se o valor verdadeiro do Replica for outro, todas as grandezas em metros (massas, velocidades,
@@ -475,8 +580,11 @@ efeito colateral, não uma solução.
 5. **Os 10 s de janela** não garantem que a cena tenha atingido repouso; medem o transiente.
 6. **Não testei colisores côncavos aproximados** (HACD/VHACD), que são o caminho natural de
    mitigação — ver abaixo.
+7. **Não executei a cena em PhysX**, que é o alvo implícito do export USD e o único ambiente
+   onde o colisor SDF pedido pelo HoloScene existe. A hipótese da seção 8.4 — de que a cena
+   seria fisicamente coerente lá — é plausível, mas **não foi verificada**.
 
-## 9. Recomendações para o próximo passo
+## 10. Recomendações para o próximo passo
 
 1. **Testar `shape: hacd` ou `vhacd`** nos objetos: decomposição convexa aproximada produz
    vários hulls por objeto e respeitaria as concavidades. É a mitigação mais promissora para o
@@ -488,17 +596,22 @@ efeito colateral, não uma solução.
 4. **Reportar o defeito do `three-to-ammo`** (laço de `iterateGeometries`) ao projeto c-frame.
 5. **Limpar os destroços do fundo** (20,1% da área fora do componente dominante) antes de gerar
    o colisor.
+6. **Rodar a mesma cena no Isaac Sim / PhysX**, a partir dos USD, com o colisor SDF que o
+   HoloScene pede. Serviria de grupo de controle: separaria o que é limitação do HoloScene do
+   que é limitação do motor de física da web — que é a distinção que este trabalho não
+   consegue fazer sozinho.
 
 ---
 
-## 10. Arquivos gerados
+## 11. Arquivos gerados
 
 **Dados**
 `mesh_stats.csv` · `scene_totals.json` · `conversion.csv` · `conversion_summary.json` ·
 `glb_verification.csv` · `geometry_health.csv` · `model_placement.json` ·
 `runtime_runs.csv` · `runtime_summary.json` · `stability_*.csv` · `stability_summary.csv/json` ·
 `hull_overlap.csv/json` · `ammo_mesh_experiment.json` · `ammo_hook.json` ·
-`criterios.json` · `environment.json` · `validator/*.json` · `console_*.json`
+`usd_physics.csv/json` · `criterios.json` · `environment.json` · `validator/*.json` ·
+`console_*.json`
 
 **Capturas** — `screenshots/`: as 21 execuções do protocolo, mais
 `vista_sem_fisica_t0`, `vista_com_fisica_{t0,t2s,t10s}`, `vista_otimizado_fisica_{t0,t10s}`,
@@ -520,6 +633,7 @@ e `diagnostico/` com as vistas usadas para validar a câmera.
 | `05_analyse_stability.py` | análise de estabilidade física |
 | `05b_hull_overlap.py` | interpenetração entre envoltórias convexas |
 | `06_screenshots.mjs` | capturas ilustrativas |
+| `07_usd_physics.py` | lê os esquemas UsdPhysics dos USD (seção 8) |
 | `probe_*.mjs` | sondas de diagnóstico da seção 6 |
 
 **Reprodução**

@@ -40,6 +40,13 @@ Três achados que valem destaque:
    do A-Frame e degrada os colisores convexos sem emitir aviso. A correção está aplicada em
    `scene/bench.js`.
 
+E um quarto, vindo dos arquivos USD da mesma saída (seção 8): eles trazem esquemas
+`UsdPhysics` com **massa, densidade e inércia zeradas**, mas pedem
+`physics:approximation = "sdf"` nos 28 prims. Colisão por campo de distância com sinal
+representa geometria côncava em corpo dinâmico — existe no PhysX, não existe em nenhum motor
+de física da web. Ou seja, **o próprio HoloScene não espera que seus objetos sejam simulados
+como sólidos convexos**, o que corrobora o achado 2 pela via do autor do dataset.
+
 ---
 
 ## O que você precisa
@@ -117,6 +124,16 @@ python scripts/05b_hull_overlap.py      # interpenetração entre envoltórias c
 npm run shots                           # capturas ilustrativas
 ```
 
+### 5. Opcional — o que os USD carregam
+
+```bash
+HOLOSCENE_USD=/caminho/para/saida/usd python scripts/07_usd_physics.py
+```
+
+Lê os esquemas `UsdPhysics` dos `usd/obj_*.usd` e compara com o que foi estimado a partir do
+OBJ. Usa `usd-core`, já incluído no `requirements.lock.txt`. Não é necessário para o
+pipeline principal — alimenta a seção 8 do relatório.
+
 O `npm run bench` abre janelas do Chrome e as dirige. **Não interaja com elas durante a
 execução** — fechar uma janela aborta o cenário em curso.
 
@@ -164,6 +181,7 @@ scripts/      pipeline completo, numerado na ordem de execução
   05_analyse_stability.py  estabilidade física por objeto
   05b_hull_overlap.py      interpenetração entre envoltórias convexas
   06_screenshots.mjs       capturas ilustrativas
+  07_usd_physics.py        lê os esquemas UsdPhysics dos USD (seção 8)
   probe_*.mjs              sondas que isolaram o defeito da seção 6
 
 scene/        index.html, bench.js, scene_manifest.json

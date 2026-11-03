@@ -1,0 +1,747 @@
+{
+  "fonte": "C:\\Users\\lurik\\Downloads\\saidas\\usd",
+  "n_arquivos": 28,
+  "metros_por_unidade": [
+    0.01
+  ],
+  "eixo_up": [
+    "Y"
+  ],
+  "esquemas_observados": [
+    "NodeDefAPI",
+    "PhysicsCollisionAPI",
+    "PhysicsMassAPI",
+    "PhysicsMaterialAPI",
+    "PhysicsMeshCollisionAPI",
+    "PhysicsRigidBodyAPI"
+  ],
+  "n_com_physics_mass": 27,
+  "n_com_density": 28,
+  "n_com_inertia": 27,
+  "n_com_approximation": 28,
+  "massas_usd_kg": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0,
+    "13": 0.0,
+    "14": 0.0,
+    "15": 0.0,
+    "16": 0.0,
+    "17": 0.0,
+    "18": 0.0,
+    "19": 0.0,
+    "20": 0.0,
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0
+  },
+  "massa_usd_min": 0.0,
+  "massa_usd_max": 0.0,
+  "massa_usd_mediana": 0.0,
+  "massa_usd_total": 0.0,
+  "comparacao_com_estimativa": {
+    "n": 27,
+    "massa_total_estimada_kg": 454.45,
+    "massa_total_usd_kg": 0.0,
+    "n_massas_usd_zeradas": 27,
+    "observacao": "nenhuma razao calculavel: todas as massas do USD valem 0, ou seja o atributo physics:mass esta presente mas nao autorado",
+    "validacao_colocacao": {
+      "n_objetos": 27,
+      "delta_mediano_unidades": 0.001508,
+      "delta_max_unidades": 0.014762,
+      "delta_max_em_cm_metricos": 10.53,
+      "nota": "compara o xformOp:translate do USD com a position que derivamos do OBJ (centro da bbox), dividida pelo fator de escala adotado. Concordancia confirma que OBJ e USD estao no mesmo referencial e que a colocacao foi derivada corretamente; o residuo e a diferenca entre pivo do USD e centro da caixa envolvente."
+    }
+  },
+  "detalhe_comparacao": [
+    {
+      "indice": 1,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 50.0,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 50.0,
+      "usd_translate": [
+        0.37715,
+        -0.119658,
+        -0.068119
+      ],
+      "nossa_position_em_unidades": [
+        0.377308,
+        -0.125049,
+        -0.068324
+      ],
+      "delta_unidades": [
+        0.000158,
+        0.005391,
+        0.000205
+      ]
+    },
+    {
+      "indice": 2,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 3.61,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 3.61,
+      "usd_translate": [
+        0.397347,
+        -0.106539,
+        -0.064454
+      ],
+      "nossa_position_em_unidades": [
+        0.400139,
+        -0.115864,
+        -0.064313
+      ],
+      "delta_unidades": [
+        0.002792,
+        0.009325,
+        0.000141
+      ]
+    },
+    {
+      "indice": 3,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 50.0,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 50.0,
+      "usd_translate": [
+        0.377048,
+        -0.120954,
+        0.069233
+      ],
+      "nossa_position_em_unidades": [
+        0.376817,
+        -0.126326,
+        0.069389
+      ],
+      "delta_unidades": [
+        0.000231,
+        0.005372,
+        0.000156
+      ]
+    },
+    {
+      "indice": 4,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 3.338,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 3.338,
+      "usd_translate": [
+        0.395451,
+        -0.104189,
+        0.074654
+      ],
+      "nossa_position_em_unidades": [
+        0.397712,
+        -0.113452,
+        0.075251
+      ],
+      "delta_unidades": [
+        0.002261,
+        0.009263,
+        0.000597
+      ]
+    },
+    {
+      "indice": 5,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 50.0,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 50.0,
+      "usd_translate": [
+        0.09769,
+        -0.129283,
+        0.205961
+      ],
+      "nossa_position_em_unidades": [
+        0.097689,
+        -0.138232,
+        0.20605
+      ],
+      "delta_unidades": [
+        1e-06,
+        0.008949,
+        8.9e-05
+      ]
+    },
+    {
+      "indice": 6,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 8.684,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 8.684,
+      "usd_translate": [
+        0.208493,
+        -0.089706,
+        0.199238
+      ],
+      "nossa_position_em_unidades": [
+        0.213735,
+        -0.102738,
+        0.200385
+      ],
+      "delta_unidades": [
+        0.005242,
+        0.013032,
+        0.001147
+      ]
+    },
+    {
+      "indice": 7,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 5.253,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 5.253,
+      "usd_translate": [
+        0.156582,
+        -0.091399,
+        0.195322
+      ],
+      "nossa_position_em_unidades": [
+        0.16419,
+        -0.105276,
+        0.197987
+      ],
+      "delta_unidades": [
+        0.007608,
+        0.013877,
+        0.002665
+      ]
+    },
+    {
+      "indice": 8,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 3.804,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 3.804,
+      "usd_translate": [
+        0.02571,
+        -0.089027,
+        0.194509
+      ],
+      "nossa_position_em_unidades": [
+        0.021877,
+        -0.103789,
+        0.195505
+      ],
+      "delta_unidades": [
+        0.003833,
+        0.014762,
+        0.000996
+      ]
+    },
+    {
+      "indice": 9,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 5.419,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 5.419,
+      "usd_translate": [
+        -0.024622,
+        -0.090277,
+        0.192106
+      ],
+      "nossa_position_em_unidades": [
+        -0.026869,
+        -0.104449,
+        0.192433
+      ],
+      "delta_unidades": [
+        0.002247,
+        0.014172,
+        0.000327
+      ]
+    },
+    {
+      "indice": 10,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 50.0,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 50.0,
+      "usd_translate": [
+        0.1049,
+        -0.133744,
+        -0.221164
+      ],
+      "nossa_position_em_unidades": [
+        0.10501,
+        -0.142299,
+        -0.221182
+      ],
+      "delta_unidades": [
+        0.00011,
+        0.008555,
+        1.8e-05
+      ]
+    },
+    {
+      "indice": 11,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 5.705,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 5.705,
+      "usd_translate": [
+        -0.01432,
+        -0.097695,
+        -0.201454
+      ],
+      "nossa_position_em_unidades": [
+        -0.015244,
+        -0.105879,
+        -0.201282
+      ],
+      "delta_unidades": [
+        0.000924,
+        0.008184,
+        0.000172
+      ]
+    },
+    {
+      "indice": 12,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 4.867,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 4.867,
+      "usd_translate": [
+        0.190104,
+        -0.094507,
+        -0.211723
+      ],
+      "nossa_position_em_unidades": [
+        0.196542,
+        -0.104084,
+        -0.213231
+      ],
+      "delta_unidades": [
+        0.006438,
+        0.009577,
+        0.001508
+      ]
+    },
+    {
+      "indice": 13,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 5.268,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 5.268,
+      "usd_translate": [
+        0.240791,
+        -0.095916,
+        -0.206385
+      ],
+      "nossa_position_em_unidades": [
+        0.240983,
+        -0.104533,
+        -0.206078
+      ],
+      "delta_unidades": [
+        0.000192,
+        0.008617,
+        0.000307
+      ]
+    },
+    {
+      "indice": 14,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 38.183,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 38.183,
+      "usd_translate": [
+        -0.017307,
+        -0.143209,
+        -0.199242
+      ],
+      "nossa_position_em_unidades": [
+        -0.017193,
+        -0.151765,
+        -0.199249
+      ],
+      "delta_unidades": [
+        0.000114,
+        0.008556,
+        7e-06
+      ]
+    },
+    {
+      "indice": 15,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 50.0,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 50.0,
+      "usd_translate": [
+        0.100505,
+        -0.15991,
+        -0.002398
+      ],
+      "nossa_position_em_unidades": [
+        0.100424,
+        -0.16562,
+        -0.002188
+      ],
+      "delta_unidades": [
+        8.1e-05,
+        0.00571,
+        0.00021
+      ]
+    },
+    {
+      "indice": 16,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 0.897,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 0.897,
+      "usd_translate": [
+        0.096212,
+        -0.164025,
+        -0.001638
+      ],
+      "nossa_position_em_unidades": [
+        0.096133,
+        -0.174287,
+        -0.001024
+      ],
+      "delta_unidades": [
+        7.9e-05,
+        0.010262,
+        0.000614
+      ]
+    },
+    {
+      "indice": 17,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 0.5,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 0.5,
+      "usd_translate": [
+        0.034181,
+        -0.122833,
+        0.017111
+      ],
+      "nossa_position_em_unidades": [
+        0.034106,
+        -0.129369,
+        0.017291
+      ],
+      "delta_unidades": [
+        7.5e-05,
+        0.006536,
+        0.00018
+      ]
+    },
+    {
+      "indice": 18,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 1.132,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 1.132,
+      "usd_translate": [
+        0.071016,
+        -0.107024,
+        -0.008591
+      ],
+      "nossa_position_em_unidades": [
+        0.070932,
+        -0.112737,
+        -0.008372
+      ],
+      "delta_unidades": [
+        8.4e-05,
+        0.005713,
+        0.000219
+      ]
+    },
+    {
+      "indice": 19,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 0.5,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 0.5,
+      "usd_translate": [
+        0.083638,
+        -0.120394,
+        0.007594
+      ],
+      "nossa_position_em_unidades": [
+        0.083315,
+        -0.125891,
+        0.007306
+      ],
+      "delta_unidades": [
+        0.000323,
+        0.005497,
+        0.000288
+      ]
+    },
+    {
+      "indice": 20,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 5.863,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 5.863,
+      "usd_translate": [
+        0.121545,
+        -0.079055,
+        -0.003581
+      ],
+      "nossa_position_em_unidades": [
+        0.121445,
+        -0.087199,
+        -0.003422
+      ],
+      "delta_unidades": [
+        0.0001,
+        0.008144,
+        0.000159
+      ]
+    },
+    {
+      "indice": 21,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 27.725,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 27.725,
+      "usd_translate": [
+        -0.163626,
+        -0.164602,
+        -0.071491
+      ],
+      "nossa_position_em_unidades": [
+        -0.163671,
+        -0.167892,
+        -0.071493
+      ],
+      "delta_unidades": [
+        4.5e-05,
+        0.00329,
+        2e-06
+      ]
+    },
+    {
+      "indice": 22,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 28.066,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 28.066,
+      "usd_translate": [
+        -0.169793,
+        -0.165517,
+        0.050934
+      ],
+      "nossa_position_em_unidades": [
+        -0.169729,
+        -0.168944,
+        0.051018
+      ],
+      "delta_unidades": [
+        6.4e-05,
+        0.003427,
+        8.4e-05
+      ]
+    },
+    {
+      "indice": 23,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 50.0,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 50.0,
+      "usd_translate": [
+        -0.495622,
+        -0.149553,
+        -0.012446
+      ],
+      "nossa_position_em_unidades": [
+        -0.503872,
+        -0.157851,
+        -0.012565
+      ],
+      "delta_unidades": [
+        0.00825,
+        0.008298,
+        0.000119
+      ]
+    },
+    {
+      "indice": 24,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 1.243,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 1.243,
+      "usd_translate": [
+        -0.489717,
+        -0.077608,
+        0.070402
+      ],
+      "nossa_position_em_unidades": [
+        -0.497982,
+        -0.087256,
+        0.070315
+      ],
+      "delta_unidades": [
+        0.008265,
+        0.009648,
+        8.7e-05
+      ]
+    },
+    {
+      "indice": 25,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 0.983,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 0.983,
+      "usd_translate": [
+        -0.491536,
+        -0.089971,
+        0.039093
+      ],
+      "nossa_position_em_unidades": [
+        -0.499497,
+        -0.099526,
+        0.039659
+      ],
+      "delta_unidades": [
+        0.007961,
+        0.009555,
+        0.000566
+      ]
+    },
+    {
+      "indice": 26,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 0.5,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 0.5,
+      "usd_translate": [
+        -0.48651,
+        -0.095668,
+        -0.061231
+      ],
+      "nossa_position_em_unidades": [
+        -0.494799,
+        -0.10515,
+        -0.061326
+      ],
+      "delta_unidades": [
+        0.008289,
+        0.009482,
+        9.5e-05
+      ]
+    },
+    {
+      "indice": 27,
+      "massa_usd_kg": 0.0,
+      "massa_estimada_kg": 2.909,
+      "razao_estimada_sobre_usd": null,
+      "erro_absoluto_kg": 2.909,
+      "usd_translate": [
+        -0.493019,
+        -0.062055,
+        -0.110958
+      ],
+      "nossa_position_em_unidades": [
+        -0.501334,
+        -0.071857,
+        -0.111082
+      ],
+      "delta_unidades": [
+        0.008315,
+        0.009802,
+        0.000124
+      ]
+    }
+  ],
+  "estrutura_exemplo_obj_5": [
+    {
+      "caminho": "/World",
+      "tipo": "Xform",
+      "esquemas": [],
+      "physics": {}
+    },
+    {
+      "caminho": "/World/obj_5",
+      "tipo": "Mesh",
+      "esquemas": [
+        "PhysicsMassAPI",
+        "PhysicsRigidBodyAPI",
+        "PhysicsCollisionAPI",
+        "PhysicsMeshCollisionAPI",
+        "PhysicsMaterialAPI"
+      ],
+      "physics": {
+        "physics:angularVelocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "physics:approximation": "sdf",
+        "physics:centerOfMass": [
+          -Infinity,
+          -Infinity,
+          -Infinity
+        ],
+        "physics:collisionEnabled": 1.0,
+        "physics:density": 0.0,
+        "physics:diagonalInertia": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "physics:dynamicFriction": 1.0000000200408773e+20,
+        "physics:kinematicEnabled": 0.0,
+        "physics:mass": 0.0,
+        "physics:principalAxes": "(0, 0, 0, 0)",
+        "physics:restitution": 0.0,
+        "physics:rigidBodyEnabled": 1.0,
+        "physics:startsAsleep": 0.0,
+        "physics:staticFriction": 1.0000000200408773e+20,
+        "physics:velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "caminho": "/World/obj_5/surface_5_material",
+      "tipo": "Material",
+      "esquemas": [],
+      "physics": {}
+    },
+    {
+      "caminho": "/World/obj_5/surface_5_material/PBRShader",
+      "tipo": "Shader",
+      "esquemas": [
+        "NodeDefAPI"
+      ],
+      "physics": {}
+    },
+    {
+      "caminho": "/World/obj_5/surface_5_material/stReader",
+      "tipo": "Shader",
+      "esquemas": [
+        "NodeDefAPI"
+      ],
+      "physics": {}
+    },
+    {
+      "caminho": "/World/obj_5/surface_5_material/diffuseTexture",
+      "tipo": "Shader",
+      "esquemas": [
+        "NodeDefAPI"
+      ],
+      "physics": {}
+    }
+  ]
+}

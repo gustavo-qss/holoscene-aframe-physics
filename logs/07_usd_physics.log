@@ -1,0 +1,50 @@
+﻿{
+  "fonte": "C:\\Users\\lurik\\Downloads\\saidas\\usd",
+  "n_arquivos": 28,
+  "metros_por_unidade": [
+    0.01
+  ],
+  "eixo_up": [
+    "Y"
+  ],
+  "esquemas_observados": [
+    "NodeDefAPI",
+    "PhysicsCollisionAPI",
+    "PhysicsMassAPI",
+    "PhysicsMaterialAPI",
+    "PhysicsMeshCollisionAPI",
+    "PhysicsRigidBodyAPI"
+  ],
+  "n_com_physics_mass": 27,
+  "n_com_density": 28,
+  "n_com_inertia": 27,
+  "n_com_approximation": 28,
+  "massa_usd_min": 0.0,
+  "massa_usd_max": 0.0,
+  "massa_usd_mediana": 0.0,
+  "massa_usd_total": 0.0,
+  "comparacao_com_estimativa": {
+    "n": 27,
+    "massa_total_estimada_kg": 454.45,
+    "massa_total_usd_kg": 0.0,
+    "n_massas_usd_zeradas": 27,
+    "observacao": "nenhuma razao calculavel: todas as massas do USD valem 0, ou seja o atributo physics:mass esta presente mas nao autorado",
+    "validacao_colocacao": {
+      "n_objetos": 27,
+      "delta_mediano_unidades": 0.001508,
+      "delta_max_unidades": 0.014762,
+      "delta_max_em_cm_metricos": 10.53,
+      "nota": "compara o xformOp:translate do USD com a position que derivamos do OBJ (centro da bbox), dividida pelo fator de escala adotado. Concordancia confirma que OBJ e USD estao no mesmo referencial e que a colocacao foi derivada corretamente; o residuo e a diferenca entre pivo do USD e centro da caixa envolvente."
+    }
+  }
+}
+
+-- estrutura de usd/obj_5.usd --
+  /World                                 Xform      []
+  /World/obj_5                           Mesh       ['PhysicsMassAPI', 'PhysicsRigidBodyAPI', 'PhysicsCollisionAPI', 'PhysicsMeshCollisionAPI', 'PhysicsMaterialAPI']
+       physics:angularVelocity = [0.0, 0.0, 0.0]
+       physics:approximation = sdf
+       physics:centerOfMass = [-inf, -inf, -inf]
+       physics:collisionEnabled = 1.0
+       physics:density = 0.0
+       physics:diagonalInertia = [0.0, 0.0, 0.0]
