@@ -1,0 +1,35 @@
+﻿protocolo: 7 cenarios x 3 repeticoes, aquecimento 3s, janela 10s, 1280x720
+  original_sem_fisica rep 1/3 ... fps 4512.22 (1% low 1666.67) | frametime 0.222 ms | carga 967 ms | colisor fundo - ms | corpos 0/0  (abortos http 2)
+  original_sem_fisica rep 2/3 ... fps 4600.12 (1% low 1666.67) | frametime 0.217 ms | carga 1010 ms | colisor fundo - ms | corpos 0/0
+  original_sem_fisica rep 3/3 ... fps 3403.06 (1% low 1250) | frametime 0.294 ms | carga 1059 ms | colisor fundo - ms | corpos 0/0
+  original_com_fisica rep 1/3 ... fps 2784.44 (1% low 1000) | frametime 0.359 ms | carga 1135 ms | colisor fundo 4 ms | corpos 28/28 | desloc med 0.983 m  (abortos http 1)
+  original_com_fisica rep 2/3 ... fps 2481.19 (1% low 1000) | frametime 0.403 ms | carga 1131 ms | colisor fundo 5 ms | corpos 28/28 | desloc med 0.801 m  (abortos http 1)
+  original_com_fisica rep 3/3 ... fps 2224.49 (1% low 90.91) | frametime 0.45 ms | carga 1135 ms | colisor fundo 4 ms | corpos 28/28 | desloc med 0.823 m  (abortos http 1)
+  otimizado_sem_fisica rep 1/3 ... fps 3494.06 (1% low 1250) | frametime 0.286 ms | carga 322 ms | colisor fundo - ms | corpos 0/0
+  otimizado_sem_fisica rep 2/3 ... fps 3664.89 (1% low 1250) | frametime 0.273 ms | carga 382 ms | colisor fundo - ms | corpos 0/0
+  otimizado_sem_fisica rep 3/3 ... fps 3528.72 (1% low 1250) | frametime 0.283 ms | carga 438 ms | colisor fundo - ms | corpos 0/0  (abortos http 1)
+  otimizado_com_fisica rep 1/3 ... fps 2458.35 (1% low 250) | frametime 0.407 ms | carga 370 ms | colisor fundo 2 ms | corpos 28/28 | desloc med 0.822 m
+  otimizado_com_fisica rep 2/3 ... fps 2502.6 (1% low 666.67) | frametime 0.4 ms | carga 419 ms | colisor fundo 3 ms | corpos 28/28 | desloc med 0.752 m
+  otimizado_com_fisica rep 3/3 ... fps 2570.77 (1% low 588.24) | frametime 0.389 ms | carga 766 ms | colisor fundo 2 ms | corpos 28/28 | desloc med 0.807 m
+  original_com_fisica_SEM_correcao rep 1/3 ... fps 60.98 (1% low 54.05) | frametime 16.399 ms | carga 1579 ms | colisor fundo 0 ms | corpos 28/28 | desloc med 0.249 m  [RENDER LOOP MORTO]  [excecoes 1 cena 1]  (abortos http 4)
+  original_com_fisica_SEM_correcao rep 2/3 ... fps 60.94 (1% low 54.05) | frametime 16.41 ms | carga 1093 ms | colisor fundo 0 ms | corpos 28/28 | desloc med 0.179 m  [RENDER LOOP MORTO]  [excecoes 1 cena 1]
+  original_com_fisica_SEM_correcao rep 3/3 ... fps 61.01 (1% low 54.05) | frametime 16.391 ms | carga 1193 ms | colisor fundo 1 ms | corpos 28/28 | desloc med 0.166 m  [RENDER LOOP MORTO]  [excecoes 1 cena 1]  (abortos http 1)
+  otimizado_com_fisica_SEM_correcao rep 1/3 ... fps 59.98 (1% low 32.05) | frametime 16.672 ms | carga 385 ms | colisor fundo 0 ms | corpos 28/28 | desloc med 0 m  [RENDER LOOP MORTO]  [excecoes 1 cena 1]
+  otimizado_com_fisica_SEM_correcao rep 2/3 ... fps 60.94 (1% low 53.76) | frametime 16.411 ms | carga 422 ms | colisor fundo 0 ms | corpos 28/28 | desloc med 0 m  [RENDER LOOP MORTO]  [excecoes 1 cena 1]
+  otimizado_com_fisica_SEM_correcao rep 3/3 ... fps 61 (1% low 53.76) | frametime 16.394 ms | carga 325 ms | colisor fundo 0 ms | corpos 28/28 | desloc med 0 m  [RENDER LOOP MORTO]  [excecoes 1 cena 1]
+  original_com_fisica_depenetrado rep 1/3 ... fps 2910.43 (1% low 1111.11) | frametime 0.344 ms | carga 1071 ms | colisor fundo 7 ms | corpos 28/28 | desloc med 0.933 m
+  original_com_fisica_depenetrado rep 2/3 ... fps 2375.78 (1% low 769.23) | frametime 0.421 ms | carga 1055 ms | colisor fundo 6 ms | corpos 28/28 | desloc med 0.965 m  (abortos http 1)
+  original_com_fisica_depenetrado rep 3/3 ... fps 1702.17 (1% low 77.52) | frametime 0.587 ms | carga 1252 ms | colisor fundo 4 ms | corpos 28/28 | desloc med 0.814 m  (abortos http 1)
+
+==== criterios ====
+  PASSOU  C1  1  (>= 0.90)
+  PASSOU  C2  1133.667  (<= 15000 ms)
+  PASSOU  C3  2496.707  (>= 30 fps)
+  PASSOU  C4  501.637  (>= 20 fps)
+  PASSOU  C5  28/28 corpos, 28/28 corpos; excecoes JS 0; abortos HTTP 3  (== 28 corpos, zero excecoes)
+  FALHOU  C6  0.869  (<= 0.10 m)
+  FALHOU  C7  5  (== 0)
+  PASSOU  C8  tri 0.5001, bytes 0.1866  (<= 0.50 nos dois)
+
+6/8 criterios aprovados
+escrito: results/runtime_runs.csv, results/runtime_summary.json

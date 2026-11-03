@@ -1,0 +1,96 @@
+{
+  "info": {
+    "triangulos": 250000,
+    "vertices": 146044,
+    "aabb_min": [
+      -5.6111,
+      -1.478,
+      -5.7916
+    ],
+    "aabb_max": [
+      6.4991,
+      2.2006,
+      4.9963
+    ]
+  },
+  "resultados": [
+    {
+      "rotulo": "H1 integral + quantizado",
+      "quantizado": true,
+      "escala": null,
+      "triangulos": 250000,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 32.5,
+      "ms_bvh": 320.1
+    },
+    {
+      "rotulo": "H2 integral + NAO quantizado",
+      "quantizado": false,
+      "escala": null,
+      "triangulos": 250000,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 29.9,
+      "ms_bvh": 200.9
+    },
+    {
+      "rotulo": "H3 sem degenerados (37 removidos) + quantizado",
+      "quantizado": true,
+      "escala": null,
+      "triangulos": 249963,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 27.1,
+      "ms_bvh": 342.4
+    },
+    {
+      "rotulo": "H4 recorte da sala (207229 tri) + quantizado",
+      "quantizado": true,
+      "escala": null,
+      "triangulos": 207229,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 23.2,
+      "ms_bvh": 265.3
+    },
+    {
+      "rotulo": "H5 metade (125000 tri) + quantizado",
+      "quantizado": true,
+      "escala": null,
+      "triangulos": 125000,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 12.8,
+      "ms_bvh": 159.9
+    },
+    {
+      "rotulo": "H6 integral + setScaling(1,1,1)",
+      "quantizado": true,
+      "escala": [
+        1,
+        1,
+        1
+      ],
+      "triangulos": 250000,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 27,
+      "ms_bvh": 353.8
+    },
+    {
+      "rotulo": "H7 sem degenerados + setScaling(1,1,1)",
+      "quantizado": true,
+      "escala": [
+        1,
+        1,
+        1
+      ],
+      "triangulos": 249963,
+      "status": "ok",
+      "erro": "",
+      "ms_add": 27.2,
+      "ms_bvh": 321.6
+    }
+  ]
+}

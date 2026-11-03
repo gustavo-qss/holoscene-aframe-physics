@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:8088/index.html?variant=optimized&physics=on&warmup=3&window=10&nav=off&desinterleave=on&depenetrar=off",
+  "n_console": 2,
+  "n_excecoes_js": 0,
+  "n_requisicoes_abortadas": 0,
+  "requisicoes_abortadas": [],
+  "page_errors": [],
+  "console": []
+}

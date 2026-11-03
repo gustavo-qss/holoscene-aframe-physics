@@ -1,0 +1,659 @@
+{
+  "gerado_por": "scripts/03b_manifest.py",
+  "referencial": "metrico, Y-up, origem no centro da cena reconstruida",
+  "fator_escala": 7.13078,
+  "sala": {
+    "piso_y_m": -1.4178,
+    "teto_y_m": 1.2822,
+    "pe_direito_m": 2.7,
+    "largura_x_m": 7.51,
+    "profundidade_z_m": 4.37
+  },
+  "camera": {
+    "position": [
+      0,
+      0.1822,
+      0
+    ],
+    "altura_olho_m": 1.6
+  },
+  "fisica": {
+    "driver": "ammo",
+    "gravidade_m_s2": -9.81,
+    "passo_fixo_s": 0.016666666666666666,
+    "max_substeps": 4,
+    "solver_iterations": 10
+  },
+  "modelo_de_massa": {
+    "formula": "massa = densidade * volume_da_envoltoria_convexa",
+    "densidade_kg_m3": 200.0,
+    "limites_kg": [
+      0.5,
+      50.0
+    ],
+    "justificativa": "o volume usado e o do HULL porque o hull e o solido que o motor de fato simula; o HoloScene nao exporta massa no OBJ",
+    "n_objetos_no_limite": 9
+  },
+  "fundo": {
+    "nome": "surface_0",
+    "modelo": "surface_0.glb",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "colisor": "mesh (estatico)",
+    "dims_m": [
+      12.1103,
+      3.6787,
+      10.7879
+    ]
+  },
+  "objetos": [
+    {
+      "nome": "surface_1",
+      "modelo": "surface_1.glb",
+      "position": [
+        2.6905,
+        -0.8917,
+        -0.4872
+      ],
+      "dims_m": [
+        0.8791,
+        1.1007,
+        0.8302
+      ],
+      "bbox_volume_m3": 0.80341,
+      "hull_volume_m3": 0.5354,
+      "hull_faces": 1168,
+      "hull_sobre_bbox": 0.6664,
+      "massa_kg": 50.0,
+      "massa_no_limite": true,
+      "base_y_m": -1.4421,
+      "altura_acima_do_piso_m": -0.0243
+    },
+    {
+      "nome": "surface_2",
+      "modelo": "surface_2.glb",
+      "position": [
+        2.8533,
+        -0.8262,
+        -0.4586
+      ],
+      "dims_m": [
+        0.2147,
+        0.2909,
+        0.4812
+      ],
+      "bbox_volume_m3": 0.03005,
+      "hull_volume_m3": 0.01805,
+      "hull_faces": 2374,
+      "hull_sobre_bbox": 0.6006,
+      "massa_kg": 3.61,
+      "massa_no_limite": false,
+      "base_y_m": -0.9716,
+      "altura_acima_do_piso_m": 0.4462
+    },
+    {
+      "nome": "surface_3",
+      "modelo": "surface_3.glb",
+      "position": [
+        2.687,
+        -0.9008,
+        0.4948
+      ],
+      "dims_m": [
+        0.8782,
+        1.112,
+        0.8368
+      ],
+      "bbox_volume_m3": 0.81719,
+      "hull_volume_m3": 0.54341,
+      "hull_faces": 896,
+      "hull_sobre_bbox": 0.665,
+      "massa_kg": 50.0,
+      "massa_no_limite": true,
+      "base_y_m": -1.4568,
+      "altura_acima_do_piso_m": -0.039
+    },
+    {
+      "nome": "surface_4",
+      "modelo": "surface_4.glb",
+      "position": [
+        2.836,
+        -0.809,
+        0.5366
+      ],
+      "dims_m": [
+        0.2198,
+        0.2994,
+        0.4917
+      ],
+      "bbox_volume_m3": 0.03237,
+      "hull_volume_m3": 0.01669,
+      "hull_faces": 2666,
+      "hull_sobre_bbox": 0.5155,
+      "massa_kg": 3.338,
+      "massa_no_limite": false,
+      "base_y_m": -0.9587,
+      "altura_acima_do_piso_m": 0.4591
+    },
+    {
+      "nome": "surface_5",
+      "modelo": "surface_5.glb",
+      "position": [
+        0.6966,
+        -0.9857,
+        1.4693
+      ],
+      "dims_m": [
+        2.3344,
+        0.9151,
+        1.001
+      ],
+      "bbox_volume_m3": 2.13831,
+      "hull_volume_m3": 1.57636,
+      "hull_faces": 784,
+      "hull_sobre_bbox": 0.7372,
+      "massa_kg": 50.0,
+      "massa_no_limite": true,
+      "base_y_m": -1.4433,
+      "altura_acima_do_piso_m": -0.0255
+    },
+    {
+      "nome": "surface_6",
+      "modelo": "surface_6.glb",
+      "position": [
+        1.5241,
+        -0.7326,
+        1.4289
+      ],
+      "dims_m": [
+        0.5912,
+        0.443,
+        0.4142
+      ],
+      "bbox_volume_m3": 0.10846,
+      "hull_volume_m3": 0.04342,
+      "hull_faces": 2122,
+      "hull_sobre_bbox": 0.4003,
+      "massa_kg": 8.684,
+      "massa_no_limite": false,
+      "base_y_m": -0.9541,
+      "altura_acima_do_piso_m": 0.4637
+    },
+    {
+      "nome": "surface_7",
+      "modelo": "surface_7.glb",
+      "position": [
+        1.1708,
+        -0.7507,
+        1.4118
+      ],
+      "dims_m": [
+        0.5011,
+        0.3932,
+        0.4251
+      ],
+      "bbox_volume_m3": 0.08375,
+      "hull_volume_m3": 0.02627,
+      "hull_faces": 3442,
+      "hull_sobre_bbox": 0.3136,
+      "massa_kg": 5.253,
+      "massa_no_limite": false,
+      "base_y_m": -0.9473,
+      "altura_acima_do_piso_m": 0.4705
+    },
+    {
+      "nome": "surface_8",
+      "modelo": "surface_8.glb",
+      "position": [
+        0.156,
+        -0.7401,
+        1.3941
+      ],
+      "dims_m": [
+        0.4655,
+        0.3781,
+        0.3302
+      ],
+      "bbox_volume_m3": 0.05812,
+      "hull_volume_m3": 0.01902,
+      "hull_faces": 3108,
+      "hull_sobre_bbox": 0.3272,
+      "massa_kg": 3.804,
+      "massa_no_limite": false,
+      "base_y_m": -0.9292,
+      "altura_acima_do_piso_m": 0.4886
+    },
+    {
+      "nome": "surface_9",
+      "modelo": "surface_9.glb",
+      "position": [
+        -0.1916,
+        -0.7448,
+        1.3722
+      ],
+      "dims_m": [
+        0.4211,
+        0.3857,
+        0.4916
+      ],
+      "bbox_volume_m3": 0.07983,
+      "hull_volume_m3": 0.0271,
+      "hull_faces": 1668,
+      "hull_sobre_bbox": 0.3394,
+      "massa_kg": 5.419,
+      "massa_no_limite": false,
+      "base_y_m": -0.9376,
+      "altura_acima_do_piso_m": 0.4802
+    },
+    {
+      "nome": "surface_10",
+      "modelo": "surface_10.glb",
+      "position": [
+        0.7488,
+        -1.0147,
+        -1.5772
+      ],
+      "dims_m": [
+        2.353,
+        0.9645,
+        0.9791
+      ],
+      "bbox_volume_m3": 2.22197,
+      "hull_volume_m3": 1.56409,
+      "hull_faces": 560,
+      "hull_sobre_bbox": 0.7039,
+      "massa_kg": 50.0,
+      "massa_no_limite": true,
+      "base_y_m": -1.497,
+      "altura_acima_do_piso_m": -0.0792
+    },
+    {
+      "nome": "surface_11",
+      "modelo": "surface_11.glb",
+      "position": [
+        -0.1087,
+        -0.755,
+        -1.4353
+      ],
+      "dims_m": [
+        0.4497,
+        0.3527,
+        0.5452
+      ],
+      "bbox_volume_m3": 0.08646,
+      "hull_volume_m3": 0.02852,
+      "hull_faces": 2390,
+      "hull_sobre_bbox": 0.3299,
+      "massa_kg": 5.705,
+      "massa_no_limite": false,
+      "base_y_m": -0.9313,
+      "altura_acima_do_piso_m": 0.4865
+    },
+    {
+      "nome": "surface_12",
+      "modelo": "surface_12.glb",
+      "position": [
+        1.4015,
+        -0.7422,
+        -1.5205
+      ],
+      "dims_m": [
+        0.4311,
+        0.3933,
+        0.3206
+      ],
+      "bbox_volume_m3": 0.05437,
+      "hull_volume_m3": 0.02434,
+      "hull_faces": 4314,
+      "hull_sobre_bbox": 0.4476,
+      "massa_kg": 4.867,
+      "massa_no_limite": false,
+      "base_y_m": -0.9389,
+      "altura_acima_do_piso_m": 0.4789
+    },
+    {
+      "nome": "surface_13",
+      "modelo": "surface_13.glb",
+      "position": [
+        1.7184,
+        -0.7454,
+        -1.4695
+      ],
+      "dims_m": [
+        0.3861,
+        0.3713,
+        0.5031
+      ],
+      "bbox_volume_m3": 0.07212,
+      "hull_volume_m3": 0.02634,
+      "hull_faces": 2140,
+      "hull_sobre_bbox": 0.3652,
+      "massa_kg": 5.268,
+      "massa_no_limite": false,
+      "base_y_m": -0.9311,
+      "altura_acima_do_piso_m": 0.4867
+    },
+    {
+      "nome": "surface_14",
+      "modelo": "surface_14.glb",
+      "position": [
+        -0.1226,
+        -1.0822,
+        -1.4208
+      ],
+      "dims_m": [
+        0.748,
+        0.7095,
+        0.8105
+      ],
+      "bbox_volume_m3": 0.43012,
+      "hull_volume_m3": 0.19091,
+      "hull_faces": 1670,
+      "hull_sobre_bbox": 0.4439,
+      "massa_kg": 38.183,
+      "massa_no_limite": false,
+      "base_y_m": -1.437,
+      "altura_acima_do_piso_m": -0.0192
+    },
+    {
+      "nome": "surface_15",
+      "modelo": "surface_15.glb",
+      "position": [
+        0.7161,
+        -1.181,
+        -0.0156
+      ],
+      "dims_m": [
+        1.4277,
+        0.508,
+        0.8258
+      ],
+      "bbox_volume_m3": 0.59889,
+      "hull_volume_m3": 0.36329,
+      "hull_faces": 1174,
+      "hull_sobre_bbox": 0.6066,
+      "massa_kg": 50.0,
+      "massa_no_limite": true,
+      "base_y_m": -1.435,
+      "altura_acima_do_piso_m": -0.0172
+    },
+    {
+      "nome": "surface_16",
+      "modelo": "surface_16.glb",
+      "position": [
+        0.6855,
+        -1.2428,
+        -0.0073
+      ],
+      "dims_m": [
+        0.4766,
+        0.0464,
+        0.3892
+      ],
+      "bbox_volume_m3": 0.00862,
+      "hull_volume_m3": 0.00449,
+      "hull_faces": 928,
+      "hull_sobre_bbox": 0.5205,
+      "massa_kg": 0.897,
+      "massa_no_limite": false,
+      "base_y_m": -1.266,
+      "altura_acima_do_piso_m": 0.1518
+    },
+    {
+      "nome": "surface_17",
+      "modelo": "surface_17.glb",
+      "position": [
+        0.2432,
+        -0.9225,
+        0.1233
+      ],
+      "dims_m": [
+        0.2671,
+        0.0981,
+        0.2304
+      ],
+      "bbox_volume_m3": 0.00604,
+      "hull_volume_m3": 0.00186,
+      "hull_faces": 1360,
+      "hull_sobre_bbox": 0.3079,
+      "massa_kg": 0.5,
+      "massa_no_limite": true,
+      "base_y_m": -0.9716,
+      "altura_acima_do_piso_m": 0.4462
+    },
+    {
+      "nome": "surface_18",
+      "modelo": "surface_18.glb",
+      "position": [
+        0.5058,
+        -0.8039,
+        -0.0597
+      ],
+      "dims_m": [
+        0.182,
+        0.2542,
+        0.1876
+      ],
+      "bbox_volume_m3": 0.00868,
+      "hull_volume_m3": 0.00566,
+      "hull_faces": 3450,
+      "hull_sobre_bbox": 0.6523,
+      "massa_kg": 1.132,
+      "massa_no_limite": false,
+      "base_y_m": -0.931,
+      "altura_acima_do_piso_m": 0.4868
+    },
+    {
+      "nome": "surface_19",
+      "modelo": "surface_19.glb",
+      "position": [
+        0.5941,
+        -0.8977,
+        0.0521
+      ],
+      "dims_m": [
+        0.127,
+        0.1024,
+        0.1111
+      ],
+      "bbox_volume_m3": 0.00144,
+      "hull_volume_m3": 0.00071,
+      "hull_faces": 2640,
+      "hull_sobre_bbox": 0.4949,
+      "massa_kg": 0.5,
+      "massa_no_limite": true,
+      "base_y_m": -0.9489,
+      "altura_acima_do_piso_m": 0.4689
+    },
+    {
+      "nome": "surface_20",
+      "modelo": "surface_20.glb",
+      "position": [
+        0.866,
+        -0.6218,
+        -0.0244
+      ],
+      "dims_m": [
+        0.3555,
+        0.7005,
+        0.3109
+      ],
+      "bbox_volume_m3": 0.07744,
+      "hull_volume_m3": 0.02932,
+      "hull_faces": 486,
+      "hull_sobre_bbox": 0.3786,
+      "massa_kg": 5.863,
+      "massa_no_limite": false,
+      "base_y_m": -0.972,
+      "altura_acima_do_piso_m": 0.4458
+    },
+    {
+      "nome": "surface_21",
+      "modelo": "surface_21.glb",
+      "position": [
+        -1.1671,
+        -1.1972,
+        -0.5098
+      ],
+      "dims_m": [
+        0.6475,
+        0.4874,
+        0.6475
+      ],
+      "bbox_volume_m3": 0.20434,
+      "hull_volume_m3": 0.13863,
+      "hull_faces": 6412,
+      "hull_sobre_bbox": 0.6784,
+      "massa_kg": 27.725,
+      "massa_no_limite": false,
+      "base_y_m": -1.4409,
+      "altura_acima_do_piso_m": -0.0231
+    },
+    {
+      "nome": "surface_22",
+      "modelo": "surface_22.glb",
+      "position": [
+        -1.2103,
+        -1.2047,
+        0.3638
+      ],
+      "dims_m": [
+        0.6521,
+        0.4837,
+        0.6571
+      ],
+      "bbox_volume_m3": 0.20725,
+      "hull_volume_m3": 0.14033,
+      "hull_faces": 4952,
+      "hull_sobre_bbox": 0.6771,
+      "massa_kg": 28.066,
+      "massa_no_limite": false,
+      "base_y_m": -1.4466,
+      "altura_acima_do_piso_m": -0.0288
+    },
+    {
+      "nome": "surface_23",
+      "modelo": "surface_23.glb",
+      "position": [
+        -3.593,
+        -1.1256,
+        -0.0896
+      ],
+      "dims_m": [
+        0.6006,
+        0.7746,
+        2.0412
+      ],
+      "bbox_volume_m3": 0.94957,
+      "hull_volume_m3": 0.7793,
+      "hull_faces": 1278,
+      "hull_sobre_bbox": 0.8207,
+      "massa_kg": 50.0,
+      "massa_no_limite": true,
+      "base_y_m": -1.513,
+      "altura_acima_do_piso_m": -0.0952
+    },
+    {
+      "nome": "surface_24",
+      "modelo": "surface_24.glb",
+      "position": [
+        -3.551,
+        -0.6222,
+        0.5014
+      ],
+      "dims_m": [
+        0.1978,
+        0.2914,
+        0.2098
+      ],
+      "bbox_volume_m3": 0.01209,
+      "hull_volume_m3": 0.00621,
+      "hull_faces": 1348,
+      "hull_sobre_bbox": 0.5139,
+      "massa_kg": 1.243,
+      "massa_no_limite": false,
+      "base_y_m": -0.768,
+      "altura_acima_do_piso_m": 0.6498
+    },
+    {
+      "nome": "surface_25",
+      "modelo": "surface_25.glb",
+      "position": [
+        -3.5618,
+        -0.7097,
+        0.2828
+      ],
+      "dims_m": [
+        0.1947,
+        0.1258,
+        0.2809
+      ],
+      "bbox_volume_m3": 0.00688,
+      "hull_volume_m3": 0.00492,
+      "hull_faces": 1388,
+      "hull_sobre_bbox": 0.7147,
+      "massa_kg": 0.983,
+      "massa_no_limite": false,
+      "base_y_m": -0.7726,
+      "altura_acima_do_piso_m": 0.6452
+    },
+    {
+      "nome": "surface_26",
+      "modelo": "surface_26.glb",
+      "position": [
+        -3.5283,
+        -0.7498,
+        -0.4373
+      ],
+      "dims_m": [
+        0.2386,
+        0.0501,
+        0.4307
+      ],
+      "bbox_volume_m3": 0.00515,
+      "hull_volume_m3": 0.00198,
+      "hull_faces": 1336,
+      "hull_sobre_bbox": 0.3847,
+      "massa_kg": 0.5,
+      "massa_no_limite": true,
+      "base_y_m": -0.7749,
+      "altura_acima_do_piso_m": 0.6429
+    },
+    {
+      "nome": "surface_27",
+      "modelo": "surface_27.glb",
+      "position": [
+        -3.5749,
+        -0.5124,
+        -0.7921
+      ],
+      "dims_m": [
+        0.253,
+        0.5233,
+        0.2632
+      ],
+      "bbox_volume_m3": 0.03484,
+      "hull_volume_m3": 0.01454,
+      "hull_faces": 5958,
+      "hull_sobre_bbox": 0.4175,
+      "massa_kg": 2.909,
+      "massa_no_limite": false,
+      "base_y_m": -0.7741,
+      "altura_acima_do_piso_m": 0.6437
+    }
+  ],
+  "resumo": {
+    "n_objetos": 27,
+    "massa_total_kg": 454.45,
+    "massa_min_kg": 0.5,
+    "massa_max_kg": 50.0,
+    "massa_mediana_kg": 5.268,
+    "hull_faces_total": 62012,
+    "hull_sobre_bbox_mediana": 0.5139,
+    "objetos_abaixo_do_piso": 7,
+    "objetos_flutuando_acima_5cm": 18
+  }
+}

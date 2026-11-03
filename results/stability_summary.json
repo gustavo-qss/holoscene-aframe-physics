@@ -1,0 +1,67 @@
+{
+  "piso_y_m": -1.4178,
+  "por_cenario": {
+    "original_com_fisica": {
+      "n_objetos": 27,
+      "desloc_mediano_m": 0.9071,
+      "desloc_medio_m": 96.5349,
+      "desloc_max_m": 781.248,
+      "repetibilidade_desvio_mediano_m": 0.225,
+      "n_estaveis_ate_10cm": 0,
+      "n_caidos_abaixo_do_piso": 6,
+      "nomes_caidos": [
+        "surface_16",
+        "surface_21",
+        "surface_22",
+        "surface_5",
+        "surface_15",
+        "surface_14"
+      ],
+      "n_que_penetravam_o_piso": 7,
+      "n_que_flutuavam": 18,
+      "caidos_que_penetravam": 3,
+      "caidos_que_flutuavam": 1
+    },
+    "otimizado_com_fisica": {
+      "n_objetos": 27,
+      "desloc_mediano_m": 0.7889,
+      "desloc_medio_m": 29.2145,
+      "desloc_max_m": 771.7007,
+      "repetibilidade_desvio_mediano_m": 0.0359,
+      "n_estaveis_ate_10cm": 5,
+      "n_caidos_abaixo_do_piso": 1,
+      "nomes_caidos": [
+        "surface_16"
+      ],
+      "n_que_penetravam_o_piso": 7,
+      "n_que_flutuavam": 18,
+      "caidos_que_penetravam": 0,
+      "caidos_que_flutuavam": 1
+    },
+    "original_com_fisica_depenetrado": {
+      "n_objetos": 27,
+      "desloc_mediano_m": 1.0062,
+      "desloc_medio_m": 154.086,
+      "desloc_max_m": 781.8332,
+      "repetibilidade_desvio_mediano_m": 0.149,
+      "n_estaveis_ate_10cm": 1,
+      "n_caidos_abaixo_do_piso": 8,
+      "nomes_caidos": [
+        "surface_16",
+        "surface_21",
+        "surface_4",
+        "surface_22",
+        "surface_2",
+        "surface_14",
+        "surface_1",
+        "surface_3"
+      ],
+      "n_que_penetravam_o_piso": 7,
+      "n_que_flutuavam": 18,
+      "caidos_que_penetravam": 4,
+      "caidos_que_flutuavam": 3
+    }
+  },
+  "correlacao_folga_inicial_vs_deslocamento": -0.5092,
+  "correlacao_massa_vs_deslocamento": 0.1996
+}

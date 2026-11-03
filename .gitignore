@@ -1,0 +1,44 @@
+# ---------------------------------------------------------------------------
+# Dados pesados: tudo aqui e REGENERAVEL a partir da saida do HoloScene.
+# Ver README.md, secao "Como rodar".
+# ---------------------------------------------------------------------------
+
+# Copia somente-leitura das malhas originais do HoloScene (84 MB).
+# Recriada por `npm run setup:meshes` a partir da pasta de saida do Stage 3.
+meshes_src/
+
+# GLB gerados pelas etapas 2 e 3a (121 MB).
+# Recriados por `node scripts/02_convert.mjs` + `node scripts/03_center_models.mjs`.
+scene/models/
+
+# ---------------------------------------------------------------------------
+# Dependencias (versoes fixadas em package-lock.json e requirements.lock.txt)
+# ---------------------------------------------------------------------------
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# ---------------------------------------------------------------------------
+# Nao versionado por ser ruido local
+# ---------------------------------------------------------------------------
+.npmrc
+npm-debug.log*
+.DS_Store
+Thumbs.db
+*.tmp
+
+# As sondas de diagnostico escrevem aqui; o conteudo relevante ja esta
+# consolidado em results/ammo_*.json e descrito na secao 6 do relatorio.
+results/diagnostico/
+
+# ---------------------------------------------------------------------------
+# O QUE FICA NO REPOSITORIO (nao ignorar):
+#   scripts/        pipeline completo
+#   scene/          index.html, bench.js, scene_manifest.json
+#   scene/vendor/   A-Frame 1.8.0, physics-system 4.2.4 e ammo.wasm fixados
+#                   (2,8 MB). Versionados de proposito: o ammo.wasm vem de um
+#                   commit especifico via CDN e precisa sobreviver a ele.
+#   results/        TODOS os dados medidos, capturas e o RELATORIO.md
+#   logs/           saida bruta de cada etapa
+# ---------------------------------------------------------------------------

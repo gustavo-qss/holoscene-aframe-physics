@@ -1,0 +1,17 @@
+{
+  "url": "http://127.0.0.1:8088/index.html?variant=original&physics=off&warmup=3&window=10&nav=off&desinterleave=on&depenetrar=off",
+  "n_console": 3,
+  "n_excecoes_js": 0,
+  "n_requisicoes_abortadas": 2,
+  "requisicoes_abortadas": [
+    "surface_1.glb net::ERR_ABORTED",
+    "surface_3.glb net::ERR_ABORTED"
+  ],
+  "page_errors": [],
+  "console": [
+    {
+      "tipo": "error",
+      "texto": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}

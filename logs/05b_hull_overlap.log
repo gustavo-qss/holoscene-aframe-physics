@@ -1,0 +1,27 @@
+﻿{
+  "n_objetos": 27,
+  "n_pares_possiveis": 351,
+  "n_pares_com_hulls_interpenetrando": 25,
+  "n_objetos_envolvidos": 25,
+  "frac_objetos_envolvidos": 0.926,
+  "volume_total_interpenetrado_m3": 0.35262,
+  "volume_maior_par_m3": 0.15694,
+  "par_mais_grave": "surface_10 x surface_14",
+  "interpretacao": "Cada par interpenetrado e uma violacao de restricao que o solver precisa resolver no primeiro passo. Com massas de dezenas de kg e volumes de interpenetracao desta ordem, o impulso de separacao ejeta os corpos, o que explica os deslocamentos de centenas de metros observados e a nao repetibilidade entre execucoes."
+}
+
+-- 12 pares com maior interpenetracao --
+  surface_10  x surface_14  vol   0.15694 m3  ( 82.2% do menor)  massas  50.0/ 38.2 kg
+  surface_5   x surface_6   vol   0.03315 m3  ( 76.3% do menor)  massas  50.0/  8.7 kg
+  surface_10  x surface_12  vol   0.02206 m3  ( 90.6% do menor)  massas  50.0/  4.9 kg
+  surface_5   x surface_7   vol   0.02030 m3  ( 77.3% do menor)  massas  50.0/  5.3 kg
+  surface_10  x surface_13  vol   0.02022 m3  ( 76.8% do menor)  massas  50.0/  5.3 kg
+  surface_5   x surface_9   vol   0.01836 m3  ( 67.8% do menor)  massas  50.0/  5.4 kg
+  surface_1   x surface_2   vol   0.01805 m3  (100.0% do menor)  massas  50.0/  3.6 kg
+  surface_3   x surface_4   vol   0.01669 m3  (100.0% do menor)  massas  50.0/  3.3 kg
+  surface_10  x surface_11  vol   0.01498 m3  ( 52.5% do menor)  massas  50.0/  5.7 kg
+  surface_5   x surface_8   vol   0.01406 m3  ( 73.9% do menor)  massas  50.0/  3.8 kg
+  surface_11  x surface_14  vol   0.00705 m3  ( 24.7% do menor)  massas   5.7/ 38.2 kg
+  surface_15  x surface_16  vol   0.00449 m3  ( 99.9% do menor)  massas  50.0/  0.9 kg
+
+escrito: C:\Users\lurik\Desktop\unifil\aframe_test\results\hull_overlap.csv

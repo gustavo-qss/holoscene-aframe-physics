@@ -1,0 +1,901 @@
+{
+  "protocolo": {
+    "cenarios": [
+      "original_sem_fisica",
+      "original_com_fisica",
+      "otimizado_sem_fisica",
+      "otimizado_com_fisica",
+      "original_com_fisica_SEM_correcao",
+      "otimizado_com_fisica_SEM_correcao",
+      "original_com_fisica_depenetrado"
+    ],
+    "repeticoes": 3,
+    "aquecimento_s": 3,
+    "janela_s": 10,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "vsync": "desligado (--disable-gpu-vsync --disable-frame-rate-limit)",
+    "observacao_fps": "FPS medido sem teto de vsync: representa vazao de renderizacao, nao a taxa percebida (que o monitor limita).",
+    "navegador": "156.0.8078.80",
+    "playwright_core": "1.64.1",
+    "aframe": "1.8.0",
+    "physics_system": "@c-frame/aframe-physics-system 4.2.4",
+    "ammo": "MozillaReality/ammo.js@8bbc0ea (ammo.wasm)"
+  },
+  "resumo_por_cenario": {
+    "original_sem_fisica": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 1012,
+        "desvio": 46.033,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "t_colisor_max_ms": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "fps_efetivo": {
+        "media": 4171.8,
+        "desvio": 667.197,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 1527.78,
+        "desvio": 240.565,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 2222.223,
+        "desvio": 481.123,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 159.81,
+        "desvio": 24.495,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 0.244,
+        "desvio": 0.043,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 0.467,
+        "desvio": 0.115,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 0.667,
+        "desvio": 0.115,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 6.367,
+        "desvio": 1.069,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 4861,
+        "desvio": 706.662,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 48612.333,
+        "desvio": 7066.219,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "desloc_medio_m": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "desloc_max_m": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "heap_usado_mb": {
+        "media": 84.233,
+        "desvio": 1.85,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 818182,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 13,
+        "desvio": 0,
+        "n": 3
+      },
+      "n_corpos_criados": 0,
+      "n_corpos_esperados": 0,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 0,
+      "requisicoes_abortadas_total": 2,
+      "erros_cena_total": 0,
+      "render_loop_vivo": true
+    },
+    "original_com_fisica": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 1133.667,
+        "desvio": 2.309,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": 4.333,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "t_colisor_max_ms": {
+        "media": 14,
+        "desvio": 1.732,
+        "n": 3
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": 1.187,
+        "desvio": 0.035,
+        "n": 3
+      },
+      "fps_efetivo": {
+        "media": 2496.707,
+        "desvio": 280.297,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 696.97,
+        "desvio": 524.863,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 1428.57,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 50.36,
+        "desvio": 30.215,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 0.404,
+        "desvio": 0.046,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 0.7,
+        "desvio": 0,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 4.333,
+        "desvio": 5.774,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 31.367,
+        "desvio": 28.781,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 1.667,
+        "desvio": 2.887,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 2601.76,
+        "desvio": 271.081,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 26043.333,
+        "desvio": 2721.183,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": 0.869,
+        "desvio": 0.099,
+        "n": 3
+      },
+      "desloc_medio_m": {
+        "media": 96.535,
+        "desvio": 59.589,
+        "n": 3
+      },
+      "desloc_max_m": {
+        "media": 781.901,
+        "desvio": 2.243,
+        "n": 3
+      },
+      "heap_usado_mb": {
+        "media": 84.633,
+        "desvio": 5.632,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 818182,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 10,
+        "desvio": 1,
+        "n": 3
+      },
+      "n_corpos_criados": 28,
+      "n_corpos_esperados": 28,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 0,
+      "requisicoes_abortadas_total": 3,
+      "erros_cena_total": 0,
+      "render_loop_vivo": true
+    },
+    "otimizado_sem_fisica": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 380.667,
+        "desvio": 58.011,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "t_colisor_max_ms": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "fps_efetivo": {
+        "media": 3562.557,
+        "desvio": 90.302,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 1250,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 1666.67,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 187.52,
+        "desvio": 18.626,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 0.281,
+        "desvio": 0.007,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 0.6,
+        "desvio": 0,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 0.8,
+        "desvio": 0,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 5.367,
+        "desvio": 0.513,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 4207.797,
+        "desvio": 83.265,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 42079.667,
+        "desvio": 832.254,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "desloc_medio_m": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "desloc_max_m": {
+        "media": null,
+        "desvio": 0,
+        "n": 0
+      },
+      "heap_usado_mb": {
+        "media": 36.067,
+        "desvio": 0.416,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 409202,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 13,
+        "desvio": 0,
+        "n": 3
+      },
+      "n_corpos_criados": 0,
+      "n_corpos_esperados": 0,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 0,
+      "requisicoes_abortadas_total": 1,
+      "erros_cena_total": 0,
+      "render_loop_vivo": true
+    },
+    "otimizado_com_fisica": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 518.333,
+        "desvio": 215.88,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": 2.333,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "t_colisor_max_ms": {
+        "media": 10,
+        "desvio": 1,
+        "n": 3
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": 0.987,
+        "desvio": 0.119,
+        "n": 3
+      },
+      "fps_efetivo": {
+        "media": 2510.573,
+        "desvio": 56.633,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 501.637,
+        "desvio": 221.424,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 1250,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 81.257,
+        "desvio": 59.47,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 0.399,
+        "desvio": 0.009,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 0.8,
+        "desvio": 0,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 2.4,
+        "desvio": 1.389,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 18,
+        "desvio": 12.766,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 2846.783,
+        "desvio": 58.777,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 28470,
+        "desvio": 587.945,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": 0.794,
+        "desvio": 0.037,
+        "n": 3
+      },
+      "desloc_medio_m": {
+        "media": 29.214,
+        "desvio": 0.209,
+        "n": 3
+      },
+      "desloc_max_m": {
+        "media": 771.701,
+        "desvio": 3.877,
+        "n": 3
+      },
+      "heap_usado_mb": {
+        "media": 35.1,
+        "desvio": 1.778,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 409202,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 10.333,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "n_corpos_criados": 28,
+      "n_corpos_esperados": 28,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 0,
+      "requisicoes_abortadas_total": 0,
+      "erros_cena_total": 0,
+      "render_loop_vivo": true
+    },
+    "original_com_fisica_SEM_correcao": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 1288.333,
+        "desvio": 256.642,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": 0.333,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "t_colisor_max_ms": {
+        "media": 2,
+        "desvio": 1,
+        "n": 3
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": 0.333,
+        "desvio": 0.1,
+        "n": 3
+      },
+      "fps_efetivo": {
+        "media": 60.977,
+        "desvio": 0.035,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 54.05,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 54.95,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 51.99,
+        "desvio": 0.156,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 16.4,
+        "desvio": 0.01,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 18.2,
+        "desvio": 0,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 18.5,
+        "desvio": 0,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 19.233,
+        "desvio": 0.058,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": 0.198,
+        "desvio": 0.045,
+        "n": 3
+      },
+      "desloc_medio_m": {
+        "media": 0.247,
+        "desvio": 0.038,
+        "n": 3
+      },
+      "desloc_max_m": {
+        "media": 0.729,
+        "desvio": 0.268,
+        "n": 3
+      },
+      "heap_usado_mb": {
+        "media": 122.667,
+        "desvio": 13.276,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 818182,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 10.667,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "n_corpos_criados": 28,
+      "n_corpos_esperados": 28,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 3,
+      "requisicoes_abortadas_total": 5,
+      "erros_cena_total": 3,
+      "render_loop_vivo": false
+    },
+    "otimizado_com_fisica_SEM_correcao": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 377.333,
+        "desvio": 48.952,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "t_colisor_max_ms": {
+        "media": 2.333,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": 0.283,
+        "desvio": 0.166,
+        "n": 3
+      },
+      "fps_efetivo": {
+        "media": 60.64,
+        "desvio": 0.572,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 46.523,
+        "desvio": 12.534,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 54.847,
+        "desvio": 0.179,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 45.513,
+        "desvio": 12.093,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 16.492,
+        "desvio": 0.156,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 18.233,
+        "desvio": 0.058,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 22.8,
+        "desvio": 7.275,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 23.267,
+        "desvio": 7.304,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "desloc_medio_m": {
+        "media": 0,
+        "desvio": 0.001,
+        "n": 3
+      },
+      "desloc_max_m": {
+        "media": 0.006,
+        "desvio": 0.009,
+        "n": 3
+      },
+      "heap_usado_mb": {
+        "media": 29.7,
+        "desvio": 2.088,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 409202,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 1.667,
+        "desvio": 1.155,
+        "n": 3
+      },
+      "n_corpos_criados": 28,
+      "n_corpos_esperados": 28,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 3,
+      "requisicoes_abortadas_total": 0,
+      "erros_cena_total": 3,
+      "render_loop_vivo": false
+    },
+    "original_com_fisica_depenetrado": {
+      "n_execucoes": 3,
+      "n_falhas": 0,
+      "t_modelos_ms": {
+        "media": 1126,
+        "desvio": 109.412,
+        "n": 3
+      },
+      "t_colisor_fundo_ms": {
+        "media": 5.667,
+        "desvio": 1.528,
+        "n": 3
+      },
+      "t_colisor_max_ms": {
+        "media": 12,
+        "desvio": 4.583,
+        "n": 3
+      },
+      "t_colisor_medio_objetos_ms": {
+        "media": 1.247,
+        "desvio": 0.569,
+        "n": 3
+      },
+      "fps_efetivo": {
+        "media": 2329.46,
+        "desvio": 605.46,
+        "n": 3
+      },
+      "fps_1pct_low": {
+        "media": 652.62,
+        "desvio": 526.57,
+        "n": 3
+      },
+      "fps_5pct_low": {
+        "media": 1507.937,
+        "desvio": 137.467,
+        "n": 3
+      },
+      "fps_min": {
+        "media": 55.753,
+        "desvio": 7.35,
+        "n": 3
+      },
+      "frametime_medio_ms": {
+        "media": 0.451,
+        "desvio": 0.124,
+        "n": 3
+      },
+      "frametime_p95_ms": {
+        "media": 0.667,
+        "desvio": 0.058,
+        "n": 3
+      },
+      "frametime_p99_ms": {
+        "media": 5.033,
+        "desvio": 6.816,
+        "n": 3
+      },
+      "frametime_max_ms": {
+        "media": 18.133,
+        "desvio": 2.25,
+        "n": 3
+      },
+      "quadros_acima_50ms": {
+        "media": 0,
+        "desvio": 0,
+        "n": 3
+      },
+      "fps_render_aframe": {
+        "media": 2417.01,
+        "desvio": 630.705,
+        "n": 3
+      },
+      "quadros_renderizados_aframe": {
+        "media": 24194,
+        "desvio": 6303.46,
+        "n": 3
+      },
+      "desloc_mediano_m": {
+        "media": 0.904,
+        "desvio": 0.08,
+        "n": 3
+      },
+      "desloc_medio_m": {
+        "media": 154.086,
+        "desvio": 34.165,
+        "n": 3
+      },
+      "desloc_max_m": {
+        "media": 785.906,
+        "desvio": 2.725,
+        "n": 3
+      },
+      "heap_usado_mb": {
+        "media": 81.767,
+        "desvio": 1.06,
+        "n": 3
+      },
+      "triangulos_renderizados": {
+        "media": 818182,
+        "desvio": 0,
+        "n": 3
+      },
+      "draw_calls": {
+        "media": 8.333,
+        "desvio": 0.577,
+        "n": 3
+      },
+      "n_corpos_criados": 28,
+      "n_corpos_esperados": 28,
+      "n_modelos_carregados": 28,
+      "excecoes_js_total": 0,
+      "requisicoes_abortadas_total": 2,
+      "erros_cena_total": 0,
+      "render_loop_vivo": true
+    }
+  },
+  "criterios": [
+    {
+      "id": "C1",
+      "valor": 1,
+      "limiar": ">= 0.90",
+      "passou": true,
+      "enunciado": "Ao menos 90% das malhas convertem para GLB sem nenhum erro do gltf-validator, nas duas versoes (original e otimizada)."
+    },
+    {
+      "id": "C2",
+      "valor": 1133.667,
+      "limiar": "<= 15000 ms",
+      "passou": true,
+      "enunciado": "A cena completa (fundo + 27 objetos) termina de carregar em ate 15 s servida em localhost."
+    },
+    {
+      "id": "C3",
+      "valor": 2496.707,
+      "limiar": ">= 30 fps",
+      "passou": true,
+      "enunciado": "Com fisica ativa, a cena sustenta FPS medio de ao menos 30 em janela de 1280x720."
+    },
+    {
+      "id": "C4",
+      "valor": 501.637,
+      "limiar": ">= 20 fps",
+      "passou": true,
+      "enunciado": "O 1% pior dos quadros ainda entrega ao menos 20 fps (ausencia de engasgos severos)."
+    },
+    {
+      "id": "C5",
+      "valor": "28/28 corpos, 28/28 corpos; excecoes JS 0; abortos HTTP 3",
+      "limiar": "== 28 corpos, zero excecoes",
+      "passou": true,
+      "enunciado": "Todos os 28 corpos sao criados sem excecao: o fundo como corpo estatico com shape mesh (malha triangular exata) e os 27 objetos como corpos dinamicos com shape hull."
+    },
+    {
+      "id": "C6",
+      "valor": 0.869,
+      "limiar": "<= 0.10 m",
+      "passou": false,
+      "enunciado": "Apos 10 s de simulacao a partir das poses reconstruidas, o deslocamento mediano dos objetos e de no maximo 0,10 m. Um deslocamento maior indica que as poses exportadas pelo HoloScene nao estao em equilibrio sob gravidade."
+    },
+    {
+      "id": "C7",
+      "valor": 5,
+      "limiar": "== 0",
+      "passou": false,
+      "enunciado": "Nenhum objeto atravessa o fundo: ao fim da simulacao nenhum corpo esta abaixo de (piso - 0,5 m)."
+    },
+    {
+      "id": "C8",
+      "valor": "tri 0.5001, bytes 0.1866",
+      "limiar": "<= 0.50 nos dois",
+      "passou": true,
+      "enunciado": "A versao otimizada entrega no maximo 50% dos triangulos e no maximo 50% dos bytes da versao original."
+    }
+  ],
+  "criterios_aprovados": 6,
+  "criterios_total": 8
+}

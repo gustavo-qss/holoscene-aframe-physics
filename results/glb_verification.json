@@ -1,0 +1,16 @@
+{
+  "n_glb": 28,
+  "todos_no_identidade": true,
+  "todos_bbox_batem": true,
+  "maior_delta_bbox_m": 0.002,
+  "fundo_dims_m": [
+    12.1103,
+    3.6787,
+    10.7879
+  ],
+  "fundo_extensao_y_m": 3.6786,
+  "eixo_vertical_e_y": true,
+  "piso_y_m": -1.478,
+  "teto_y_m": 2.2006,
+  "escala_aplicada": 7.13078
+}

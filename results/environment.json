@@ -1,0 +1,63 @@
+﻿{
+    "gerado_em":  "2026-11-02 22:55:21 -03:00",
+    "hardware":  {
+                     "cpu":  "AMD Ryzen 5 3600 6-Core Processor",
+                     "cpu_nucleos":  6,
+                     "cpu_threads":  12,
+                     "cpu_clock_mhz":  3600,
+                     "ram_gb":  31.9,
+                     "gpu":  "NVIDIA GeForce RTX 3060",
+                     "gpu_driver":  "32.0.16.1656"
+                 },
+    "sistema":  {
+                    "so":  "Microsoft Windows 11 Pro",
+                    "versao":  "10.0.22631",
+                    "build":  "22631",
+                    "arq":  "64 bits"
+                },
+    "navegador":  {
+                      "nome":  "Google Chrome",
+                      "versao":  "156.0.8078.80",
+                      "caminho":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+                      "flags":  [
+                                    "--disable-gpu-vsync",
+                                    "--disable-frame-rate-limit",
+                                    "--disable-background-timer-throttling",
+                                    "--disable-backgrounding-occluded-windows",
+                                    "--disable-renderer-backgrounding"
+                                ]
+                  },
+    "runtimes":  {
+                     "node":  "v20.19.0",
+                     "npm":  "10.8.2",
+                     "python":  "Python 3.12.3"
+                 },
+    "pacotes_node":  {
+                         "@c-frame/aframe-physics-system":  "4.2.4",
+                         "@gltf-transform/cli":  "4.5.1",
+                         "@gltf-transform/core":  "4.5.1",
+                         "@gltf-transform/extensions":  "4.5.1",
+                         "@gltf-transform/functions":  "4.5.1",
+                         "aframe":  "1.8.0",
+                         "gltf-validator":  "2.0.0-dev.3.10",
+                         "http-server":  "14.1.1",
+                         "meshoptimizer":  "1.3.0",
+                         "obj2gltf":  "3.2.0",
+                         "playwright-core":  "1.64.1",
+                         "sharp":  "0.35.5"
+                     },
+    "pacotes_python":  {
+                           "trimesh":  "5.2.0",
+                           "pillow":  "13.0.0",
+                           "manifold3d":  "3.5.4",
+                           "numpy":  "2.5.4",
+                           "networkx":  "3.7",
+                           "scipy":  "1.18.1"
+                       },
+    "bibliotecas_fixadas_na_cena":  {
+                                        "aframe":  "1.8.0 (vendor/aframe-v1.8.0.min.js)",
+                                        "physics_system":  "@c-frame/aframe-physics-system 4.2.4 (vendor/aframe-physics-system.js)",
+                                        "ammo":  "MozillaReality/ammo.js@8bbc0ea builds/ammo.wasm.js + .wasm",
+                                        "observacao":  "todos servidos localmente; a cena nao depende de CDN"
+                                    }
+}

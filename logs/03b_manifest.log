@@ -1,0 +1,65 @@
+﻿{
+  "gerado_por": "scripts/03b_manifest.py",
+  "referencial": "metrico, Y-up, origem no centro da cena reconstruida",
+  "fator_escala": 7.13078,
+  "sala": {
+    "piso_y_m": -1.4178,
+    "teto_y_m": 1.2822,
+    "pe_direito_m": 2.7,
+    "largura_x_m": 7.51,
+    "profundidade_z_m": 4.37
+  },
+  "camera": {
+    "position": [
+      0,
+      0.1822,
+      0
+    ],
+    "altura_olho_m": 1.6
+  },
+  "fisica": {
+    "driver": "ammo",
+    "gravidade_m_s2": -9.81,
+    "passo_fixo_s": 0.016666666666666666,
+    "max_substeps": 4,
+    "solver_iterations": 10
+  },
+  "modelo_de_massa": {
+    "formula": "massa = densidade * volume_da_envoltoria_convexa",
+    "densidade_kg_m3": 200.0,
+    "limites_kg": [
+      0.5,
+      50.0
+    ],
+    "justificativa": "o volume usado e o do HULL porque o hull e o solido que o motor de fato simula; o HoloScene nao exporta massa no OBJ",
+    "n_objetos_no_limite": 9
+  },
+  "fundo": {
+    "nome": "surface_0",
+    "modelo": "surface_0.glb",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "colisor": "mesh (estatico)",
+    "dims_m": [
+      12.1103,
+      3.6787,
+      10.7879
+    ]
+  },
+  "resumo": {
+    "n_objetos": 27,
+    "massa_total_kg": 454.45,
+    "massa_min_kg": 0.5,
+    "massa_max_kg": 50.0,
+    "massa_mediana_kg": 5.268,
+    "hull_faces_total": 62012,
+    "hull_sobre_bbox_mediana": 0.5139,
+    "objetos_abaixo_do_piso": 7,
+    "objetos_flutuando_acima_5cm": 18
+  }
+}
+
+escrito: C:\Users\lurik\Desktop\unifil\aframe_test\scene\scene_manifest.json

@@ -1,0 +1,81 @@
+﻿{
+  "piso_y_m": -1.4178,
+  "por_cenario": {
+    "original_com_fisica": {
+      "n_objetos": 27,
+      "desloc_mediano_m": 0.9071,
+      "desloc_medio_m": 96.5349,
+      "desloc_max_m": 781.248,
+      "repetibilidade_desvio_mediano_m": 0.225,
+      "n_estaveis_ate_10cm": 0,
+      "n_caidos_abaixo_do_piso": 6,
+      "nomes_caidos": [
+        "surface_16",
+        "surface_21",
+        "surface_22",
+        "surface_5",
+        "surface_15",
+        "surface_14"
+      ],
+      "n_que_penetravam_o_piso": 7,
+      "n_que_flutuavam": 18,
+      "caidos_que_penetravam": 3,
+      "caidos_que_flutuavam": 1
+    },
+    "otimizado_com_fisica": {
+      "n_objetos": 27,
+      "desloc_mediano_m": 0.7889,
+      "desloc_medio_m": 29.2145,
+      "desloc_max_m": 771.7007,
+      "repetibilidade_desvio_mediano_m": 0.0359,
+      "n_estaveis_ate_10cm": 5,
+      "n_caidos_abaixo_do_piso": 1,
+      "nomes_caidos": [
+        "surface_16"
+      ],
+      "n_que_penetravam_o_piso": 7,
+      "n_que_flutuavam": 18,
+      "caidos_que_penetravam": 0,
+      "caidos_que_flutuavam": 1
+    },
+    "original_com_fisica_depenetrado": {
+      "n_objetos": 27,
+      "desloc_mediano_m": 1.0062,
+      "desloc_medio_m": 154.086,
+      "desloc_max_m": 781.8332,
+      "repetibilidade_desvio_mediano_m": 0.149,
+      "n_estaveis_ate_10cm": 1,
+      "n_caidos_abaixo_do_piso": 8,
+      "nomes_caidos": [
+        "surface_16",
+        "surface_21",
+        "surface_4",
+        "surface_22",
+        "surface_2",
+        "surface_14",
+        "surface_1",
+        "surface_3"
+      ],
+      "n_que_penetravam_o_piso": 7,
+      "n_que_flutuavam": 18,
+      "caidos_que_penetravam": 4,
+      "caidos_que_flutuavam": 3
+    }
+  },
+  "correlacao_folga_inicial_vs_deslocamento": -0.5092,
+  "correlacao_massa_vs_deslocamento": 0.1996
+}
+
+-- 10 maiores deslocamentos (original) --
+  surface_16  desloc 781.248 ±1.191 m  massa   0.9 kg  folga inicial +0.152 m  CAIU
+  surface_21  desloc 518.865 ±449.226 m  massa  27.7 kg  folga inicial -0.023 m  CAIU
+  surface_22  desloc 512.284 ±443.764 m  massa  28.1 kg  folga inicial -0.029 m  CAIU
+  surface_5   desloc 261.639 ±452.723 m  massa  50.0 kg  folga inicial -0.025 m  CAIU
+  surface_15  desloc 257.894 ±446.568 m  massa  50.0 kg  folga inicial -0.017 m  CAIU
+  surface_14  desloc 257.874 ±445.901 m  massa  38.2 kg  folga inicial -0.019 m  CAIU
+  surface_27  desloc   1.339 ±0.151 m  massa   2.9 kg  folga inicial +0.644 m  
+  surface_24  desloc   1.041 ±0.032 m  massa   1.2 kg  folga inicial +0.650 m  
+  surface_13  desloc   1.038 ±0.225 m  massa   5.3 kg  folga inicial +0.487 m  
+  surface_25  desloc   1.016 ±0.021 m  massa   1.0 kg  folga inicial +0.645 m  
+
+escrito: C:\Users\lurik\Desktop\unifil\aframe_test\results\stability_summary.csv

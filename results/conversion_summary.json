@@ -1,0 +1,43 @@
+{
+  "ferramentas": {
+    "obj2gltf": "3.2.0",
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "1.3.0",
+    "sharp": "0.35.5",
+    "gltf-validator": "2.0.0-dev.3.10",
+    "node": "v20.19.0"
+  },
+  "parametros": {
+    "escala": 7.13078,
+    "rotacao_x_graus": -90,
+    "simplify_ratio": 0.5,
+    "simplify_error": 0.001,
+    "weld_tolerance": 0,
+    "textura_formato": "webp",
+    "textura_lado": 1024,
+    "textura_qualidade": 80,
+    "material_metallic": 0,
+    "material_roughness": 1,
+    "material_double_sided": true
+  },
+  "comando": "node scripts/02_convert.mjs",
+  "n_malhas": 28,
+  "n_falhas": 0,
+  "n_falhas_otimizacao": 0,
+  "triangulos_original": 818182,
+  "triangulos_otimizado": 409202,
+  "razao_triangulos_cena": 0.5001,
+  "obj_mb": 84.04,
+  "glb_original_mb": 51.07,
+  "glb_otimizado_mb": 9.53,
+  "reducao_total_pct": 81.34,
+  "tempo_total_ms": 13107,
+  "tempo_total_s": 13.1,
+  "validacao": {
+    "originais_sem_erro": 28,
+    "otimizados_sem_erro": 28,
+    "originais_com_aviso": 0,
+    "otimizados_com_aviso": 0
+  }
+}

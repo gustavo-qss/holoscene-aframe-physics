@@ -1,0 +1,24 @@
+﻿{
+  "n_malhas": 56,
+  "com_nan": 0,
+  "com_inf": 0,
+  "com_tri_indices_repetidos": 2,
+  "com_tri_area_nula": 2,
+  "total_tri_area_nula": 8,
+  "coord_abs_max_global": 6.4991,
+  "maior_razao_aspecto": 10.26,
+  "malha_maior_razao": "surface_16",
+  "todas_saudaveis": false
+}
+
+-- malhas com mais triangulos de area nula --
+  original   surface_7   area_nula=     4 area_min=0.000e+00  razao=1.27
+  original   surface_12  area_nula=     4 area_min=0.000e+00  razao=1.34
+  original   surface_0   area_nula=     0 area_min=5.246e-08  razao=3.29
+  original   surface_1   area_nula=     0 area_min=1.362e-07  razao=1.33
+  original   surface_2   area_nula=     0 area_min=1.363e-08  razao=2.24
+  original   surface_3   area_nula=     0 area_min=1.471e-06  razao=1.33
+  original   surface_4   area_nula=     0 area_min=8.587e-09  razao=2.24
+  original   surface_5   area_nula=     0 area_min=4.404e-06  razao=2.55
+
+escrito: C:\Users\lurik\Desktop\unifil\aframe_test\results\geometry_health.csv

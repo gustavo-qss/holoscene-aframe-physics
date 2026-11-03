@@ -1,0 +1,53 @@
+﻿{
+  "metodo": "picos de area em histograma de planos perpendiculares a cada eixo",
+  "eixo_up": "z",
+  "extensao_x": 1.05263,
+  "extensao_y": 0.61265,
+  "extensao_z": 0.37864,
+  "planos": {
+    "x": [
+      {
+        "pos": -0.53407,
+        "area": 0.10205
+      },
+      {
+        "pos": 0.51856,
+        "area": 0.06345
+      }
+    ],
+    "y": [
+      {
+        "pos": -0.29403,
+        "area": 0.12506
+      },
+      {
+        "pos": 0.31862,
+        "area": 0.08996
+      }
+    ],
+    "z": [
+      {
+        "pos": -0.19883,
+        "area": 0.13792
+      },
+      {
+        "pos": 0.17981,
+        "area": 0.1475
+      }
+    ]
+  },
+  "piso_z": -0.19883,
+  "teto_z": 0.17981,
+  "pe_direito_unidades": 0.37864,
+  "pe_direito_adotado_m": 2.7,
+  "fator_escala_adotado": 7.13078,
+  "sala_m": {
+    "largura_x": 7.51,
+    "profundidade_y": 4.37,
+    "altura_z": 2.7
+  },
+  "area_piso_m2": 32.82,
+  "observacao": "Fator derivado da hipotese pe-direito = 2.7 m, declarada antes da medicao. O export do HoloScene nao carrega escala metrica."
+}
+
+atualizado: C:\Users\lurik\Desktop\unifil\aframe_test\results\scene_totals.json

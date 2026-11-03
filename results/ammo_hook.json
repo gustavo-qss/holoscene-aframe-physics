@@ -1,0 +1,33 @@
+{
+  "chamadas": [
+    {
+      "args": [
+        true,
+        false
+      ],
+      "nTri": 250000,
+      "min": [
+        -5.611117839813232,
+        -1.4774976968765259,
+        -5.791141986846924
+      ],
+      "max": [
+        6.499142646789551,
+        2.1986262798309326,
+        4.993656635284424
+      ],
+      "naoFinitos": 489711,
+      "escala": [
+        1,
+        1,
+        1
+      ],
+      "quantizado": true,
+      "buildBvh": true,
+      "resultado": "FALHOU: RuntimeError: float unrepresentable in integer range"
+    }
+  ],
+  "erros": [
+    "RuntimeError: float unrepresentable in integer range"
+  ]
+}

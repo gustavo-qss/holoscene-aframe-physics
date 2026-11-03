@@ -1,0 +1,12 @@
+{
+  "n_malhas": 56,
+  "com_nan": 0,
+  "com_inf": 0,
+  "com_tri_indices_repetidos": 2,
+  "com_tri_area_nula": 2,
+  "total_tri_area_nula": 8,
+  "coord_abs_max_global": 6.4991,
+  "maior_razao_aspecto": 10.26,
+  "malha_maior_razao": "surface_16",
+  "todas_saudaveis": false
+}

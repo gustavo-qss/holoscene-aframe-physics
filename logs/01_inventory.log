@@ -1,0 +1,130 @@
+﻿  analisando surface_0 ...
+  analisando surface_1 ...
+  analisando surface_2 ...
+  analisando surface_3 ...
+  analisando surface_4 ...
+  analisando surface_5 ...
+  analisando surface_6 ...
+  analisando surface_7 ...
+  analisando surface_8 ...
+  analisando surface_9 ...
+  analisando surface_10 ...
+  analisando surface_11 ...
+  analisando surface_12 ...
+  analisando surface_13 ...
+  analisando surface_14 ...
+  analisando surface_15 ...
+  analisando surface_16 ...
+  analisando surface_17 ...
+  analisando surface_18 ...
+  analisando surface_19 ...
+  analisando surface_20 ...
+  analisando surface_21 ...
+  analisando surface_22 ...
+  analisando surface_23 ...
+  analisando surface_24 ...
+  analisando surface_25 ...
+  analisando surface_26 ...
+  analisando surface_27 ...
+
+escrito: C:\Users\lurik\Desktop\unifil\aframe_test\results\mesh_stats.csv
+escrito: C:\Users\lurik\Desktop\unifil\aframe_test\results\scene_totals.json
+
+{
+  "n_malhas": 28,
+  "n_falhas": 0,
+  "malha_fundo": "surface_0",
+  "n_objetos": 27,
+  "triangulos_cena": 818182,
+  "triangulos_fundo": 250000,
+  "triangulos_objetos": 568182,
+  "vertices_cena_soldado": 409469,
+  "vertices_cena_arquivo": 409470,
+  "watertight_total": 0,
+  "manifold_total": 0,
+  "watertight_entre_objetos": 0,
+  "manifold_entre_objetos": 0,
+  "so_triangulos_total": 28,
+  "com_uv_total": 28,
+  "mtl_ok_total": 28,
+  "tamanho_obj_mb": 48.11,
+  "tamanho_texturas_mb": 35.93,
+  "tamanho_total_mb": 84.04,
+  "fundo_bbox": {
+    "min": [
+      -0.78689,
+      -0.70066,
+      -0.20728
+    ],
+    "max": [
+      0.91142,
+      0.8122,
+      0.30861
+    ],
+    "dims": [
+      1.69831,
+      1.51286,
+      0.51589
+    ],
+    "diagonal": 2.33219
+  },
+  "fundo_nucleo_dims": [
+    1.20574,
+    0.84823,
+    0.51589
+  ],
+  "fundo_n_componentes": 49,
+  "fundo_area_fora_do_nucleo_frac": 0.20109,
+  "eixo_up_inferido": "z",
+  "area_horizontal_por_eixo": {
+    "x": 0.5076,
+    "y": 0.8984,
+    "z": 1.2968
+  },
+  "rotacao_para_aframe": {
+    "motivo": "OBJ e Z-up; A-Frame/glTF e Y-up",
+    "rotacao_graus": [
+      -90,
+      0,
+      0
+    ],
+    "mapeamento": "(x,y,z)_obj -> (x, z, -y)_aframe",
+    "confere_com_scene_glb_do_holoscene": true
+  },
+  "escala": {
+    "pe_direito_unidades_export": 0.37863,
+    "plano_piso_unidades": -0.19947,
+    "plano_teto_unidades": 0.17916,
+    "fator_para_pe_direito_2_5m": 6.6027,
+    "fator_para_pe_direito_2_7m": 7.1309,
+    "fator_para_pe_direito_3_0m": 7.9232,
+    "planta_nucleo_unidades": [
+      0.84823,
+      1.20574
+    ],
+    "planta_nucleo_m_se_2_7m": [
+      6.05,
+      8.6
+    ],
+    "conclusao": "O OBJ exportado NAO esta em metros: o pe-direito medido vale 0.379 unidades. Nenhum arquivo do Stage 3 (obj/mtl/png) nem o bg_info.pkl carrega o fator de normalizacao, entao a escala metrica precisa ser declarada externamente. Adotamos pe-direito = 2.7 m, logo fator = 7.1309."
+  },
+  "escala_plausivel_metros": false,
+  "fragmentacao": {
+    "componentes_total": 793,
+    "componentes_mediana_objetos": 17,
+    "objetos_com_1_componente": 0,
+    "area_fora_do_componente_dominante_mediana": 0.00021,
+    "inflacao_bbox_mediana_objetos": 1.0
+  },
+  "hull_sobre_bbox_mediana_objetos": 0.5156,
+  "resolucoes_textura": [
+    "2048x2048"
+  ],
+  "definicoes": {
+    "manifold": "nenhuma aresta compartilhada por 3+ faces",
+    "watertight": "manifold E nenhuma aresta de borda",
+    "volume": "so calculado quando watertight",
+    "contagens": "topologia medida apos solda com merge_tex/merge_norm",
+    "fundo": "malha de maior area de superficie (= surface_0, raiz do graph_node_dict)"
+  }
+}

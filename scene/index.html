@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>HoloScene replica_room_0 — A-Frame + Ammo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Tudo local e com versao fixada; nenhuma dependencia de CDN. -->
+    <script src="vendor/aframe-v1.8.0.min.js"></script>
+    <script src="vendor/ammo.wasm.js"></script>
+    <script src="vendor/aframe-physics-system.js"></script>
+
+    <style>
+      html, body { margin: 0; height: 100%; background: #111; }
+      #hud {
+        position: fixed; left: 8px; top: 8px; z-index: 10;
+        font: 12px/1.45 ui-monospace, Consolas, monospace;
+        color: #d8d8d8; background: rgba(0,0,0,.66);
+        padding: 8px 10px; border-radius: 6px; white-space: pre;
+        pointer-events: none;
+      }
+      #hud b { color: #7fd1ff; }
+    </style>
+  </head>
+  <body>
+    <div id="hud">carregando…</div>
+    <!--
+      O sistema de fisica e declarado estaticamente para nao depender da ordem
+      de inicializacao. O cenario "sem fisica" (?physics=off) mantem o mundo
+      Ammo instanciado mas NAO cria nenhum corpo rigido: isso isola exatamente
+      o custo de construir os colisores e de integrar a simulacao.
+      Parametros: gravidade -9.81 m/s2, passo fixo de 1/60 s, ate 4 subpassos
+      por quadro, 10 iteracoes do solver.
+    -->
+    <a-scene id="cena" stats="false" renderer="antialias: false; colorManagement: true"
+             background="color: #101014" vr-mode-ui="enabled: false"
+             loading-screen="enabled: false"
+             physics="driver: ammo; gravity: -9.81; fixedTimeStep: 0.0166666667; maxSubSteps: 4; iterations: 10; debug: false"></a-scene>
+
+    <script src="bench.js"></script>
+  </body>
+</html>

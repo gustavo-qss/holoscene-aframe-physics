@@ -1,0 +1,72 @@
+﻿  convertendo surface_0 ... 250000->125000 tri, 9.66->3.12 MB, 2135 ms
+  convertendo surface_1 ... 21768->10884 tri, 1.65->0.24 MB, 445 ms
+  convertendo surface_2 ... 16989->8493 tri, 1.35->0.22 MB, 358 ms
+  convertendo surface_3 ... 22128->11063 tri, 1.78->0.25 MB, 449 ms
+  convertendo surface_4 ... 17657->8828 tri, 1.34->0.21 MB, 346 ms
+  convertendo surface_5 ... 21245->10622 tri, 2.16->0.26 MB, 434 ms
+  convertendo surface_6 ... 19923->9960 tri, 1.46->0.20 MB, 367 ms
+  convertendo surface_7 ... 22829->11414 tri, 1.29->0.23 MB, 340 ms
+  convertendo surface_8 ... 21764->10882 tri, 1.06->0.22 MB, 338 ms
+  convertendo surface_9 ... 22334->11166 tri, 1.44->0.23 MB, 358 ms
+  convertendo surface_10 ... 21764->10882 tri, 2.02->0.28 MB, 376 ms
+  convertendo surface_11 ... 22067->11031 tri, 1.63->0.25 MB, 346 ms
+  convertendo surface_12 ... 23224->11612 tri, 1.39->0.25 MB, 379 ms
+  convertendo surface_13 ... 22105->11052 tri, 1.54->0.25 MB, 383 ms
+  convertendo surface_14 ... 17502->8886 tri, 1.85->0.23 MB, 377 ms
+  convertendo surface_15 ... 22647->11322 tri, 1.97->0.27 MB, 407 ms
+  convertendo surface_16 ... 17710->8855 tri, 1.05->0.20 MB, 305 ms
+  convertendo surface_17 ... 20057->10027 tri, 1.66->0.27 MB, 381 ms
+  convertendo surface_18 ... 21165->10581 tri, 1.46->0.23 MB, 351 ms
+  convertendo surface_19 ... 20980->10489 tri, 1.23->0.19 MB, 311 ms
+  convertendo surface_20 ... 20942->10470 tri, 1.94->0.30 MB, 377 ms
+  convertendo surface_21 ... 22632->11314 tri, 1.53->0.25 MB, 337 ms
+  convertendo surface_22 ... 22343->11170 tri, 1.44->0.25 MB, 351 ms
+  convertendo surface_23 ... 22504->11251 tri, 1.87->0.23 MB, 409 ms
+  convertendo surface_24 ... 20187->10092 tri, 1.59->0.25 MB, 342 ms
+  convertendo surface_25 ... 20773->10385 tri, 1.10->0.20 MB, 386 ms
+  convertendo surface_26 ... 20784->10392 tri, 1.48->0.27 MB, 385 ms
+  convertendo surface_27 ... 22159->11079 tri, 1.15->0.21 MB, 414 ms
+
+{
+  "ferramentas": {
+    "obj2gltf": "3.2.0",
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "1.3.0",
+    "sharp": "0.35.5",
+    "gltf-validator": "2.0.0-dev.3.10",
+    "node": "v20.19.0"
+  },
+  "parametros": {
+    "escala": 7.13078,
+    "rotacao_x_graus": -90,
+    "simplify_ratio": 0.5,
+    "simplify_error": 0.001,
+    "weld_tolerance": 0,
+    "textura_formato": "webp",
+    "textura_lado": 1024,
+    "textura_qualidade": 80,
+    "material_metallic": 0,
+    "material_roughness": 1,
+    "material_double_sided": true
+  },
+  "comando": "node scripts/02_convert.mjs",
+  "n_malhas": 28,
+  "n_falhas": 0,
+  "n_falhas_otimizacao": 0,
+  "triangulos_original": 818182,
+  "triangulos_otimizado": 409202,
+  "razao_triangulos_cena": 0.5001,
+  "obj_mb": 84.04,
+  "glb_original_mb": 51.07,
+  "glb_otimizado_mb": 9.53,
+  "reducao_total_pct": 81.34,
+  "tempo_total_ms": 13107,
+  "tempo_total_s": 13.1,
+  "validacao": {
+    "originais_sem_erro": 28,
+    "otimizados_sem_erro": 28,
+    "originais_com_aviso": 0,
+    "otimizados_com_aviso": 0
+  }
+}

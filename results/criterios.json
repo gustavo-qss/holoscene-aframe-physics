@@ -1,0 +1,84 @@
+{
+  "nota": "A secao 4 do enunciado (criterios de sucesso) veio truncada. Estes criterios foram definidos e congelados ANTES de qualquer medicao de desempenho ou fisica, conforme a regra do enunciado, e nao serao alterados depois. As etapas 1 e 2 ja estavam concluidas quando este arquivo foi escrito, entao C1 e C8 sao verificaveis imediatamente; C2 a C7 dependem das medicoes da etapa 5.",
+  "congelado_em": "2026-11-02",
+  "escopo": "cena replica_room_0 do HoloScene (Xia et al., 2025), Stage 3, 1 fundo + 27 objetos",
+  "criterios": [
+    {
+      "id": "C1",
+      "eixo": "conversao",
+      "enunciado": "Ao menos 90% das malhas convertem para GLB sem nenhum erro do gltf-validator, nas duas versoes (original e otimizada).",
+      "metrica": "n_malhas_sem_erro / n_malhas",
+      "limiar": ">= 0.90",
+      "fonte": "results/conversion.csv, results/validator/*.json"
+    },
+    {
+      "id": "C2",
+      "eixo": "carga",
+      "enunciado": "A cena completa (fundo + 27 objetos) termina de carregar em ate 15 s servida em localhost.",
+      "metrica": "tempo entre navigationStart e o ultimo evento model-loaded",
+      "limiar": "<= 15000 ms",
+      "fonte": "results/runtime_runs.csv"
+    },
+    {
+      "id": "C3",
+      "eixo": "desempenho",
+      "enunciado": "Com fisica ativa, a cena sustenta FPS medio de ao menos 30 em janela de 1280x720.",
+      "metrica": "media do FPS na janela de medicao, apos descartar o aquecimento",
+      "limiar": ">= 30 fps",
+      "fonte": "results/runtime_runs.csv"
+    },
+    {
+      "id": "C4",
+      "eixo": "fluidez",
+      "enunciado": "O 1% pior dos quadros ainda entrega ao menos 20 fps (ausencia de engasgos severos).",
+      "metrica": "percentil 1 do FPS instantaneo na janela de medicao",
+      "limiar": ">= 20 fps",
+      "fonte": "results/runtime_runs.csv"
+    },
+    {
+      "id": "C5",
+      "eixo": "fisica",
+      "enunciado": "Todos os 28 corpos sao criados sem excecao: o fundo como corpo estatico com shape mesh (malha triangular exata) e os 27 objetos como corpos dinamicos com shape hull.",
+      "metrica": "n_corpos_criados == 28 e nenhuma excecao no console",
+      "limiar": "== 28, zero erros de console",
+      "fonte": "results/runtime_runs.csv, results/console_*.json"
+    },
+    {
+      "id": "C6",
+      "eixo": "plausibilidade fisica",
+      "enunciado": "Apos 10 s de simulacao a partir das poses reconstruidas, o deslocamento mediano dos objetos e de no maximo 0,10 m. Um deslocamento maior indica que as poses exportadas pelo HoloScene nao estao em equilibrio sob gravidade.",
+      "metrica": "mediana de ||p_final - p_inicial|| sobre os 27 objetos",
+      "limiar": "<= 0.10 m",
+      "fonte": "results/runtime_runs.csv, results/stability_*.csv"
+    },
+    {
+      "id": "C7",
+      "eixo": "integridade do colisor",
+      "enunciado": "Nenhum objeto atravessa o fundo: ao fim da simulacao nenhum corpo esta abaixo de (piso - 0,5 m).",
+      "metrica": "n_objetos com y_final < piso_y - 0.5",
+      "limiar": "== 0",
+      "fonte": "results/stability_*.csv"
+    },
+    {
+      "id": "C8",
+      "eixo": "orcamento",
+      "enunciado": "A versao otimizada entrega no maximo 50% dos triangulos e no maximo 50% dos bytes da versao original.",
+      "metrica": "razao_triangulos_cena e razao de bytes",
+      "limiar": "<= 0.50 nos dois",
+      "fonte": "results/conversion_summary.json"
+    }
+  ],
+  "protocolo_de_medicao": {
+    "repeticoes": 3,
+    "cenarios": [
+      "original_sem_fisica",
+      "original_com_fisica",
+      "otimizado_sem_fisica",
+      "otimizado_com_fisica"
+    ],
+    "aquecimento_s": 3,
+    "janela_de_medicao_s": 10,
+    "resolucao": "1280x720",
+    "reporte": "media e desvio padrao de cada metrica sobre as 3 repeticoes"
+  }
+}

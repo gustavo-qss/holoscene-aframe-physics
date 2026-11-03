@@ -1,0 +1,11 @@
+{
+  "url": "http://127.0.0.1:8088/index.html?variant=optimized&physics=on&warmup=3&window=10&nav=off&desinterleave=off&depenetrar=off",
+  "n_console": 2,
+  "n_excecoes_js": 1,
+  "n_requisicoes_abortadas": 0,
+  "requisicoes_abortadas": [],
+  "page_errors": [
+    "RuntimeError: float unrepresentable in integer range\n    at http://127.0.0.1:8088/vendor/ammo.wasm.wasm:wasm-function[1878]:0xbe41a\n    at http://127.0.0.1:8088/vendor/ammo.wasm.wasm:wasm-function[1791]:0xac907\n    at http://127.0.0.1:8088/vendor/ammo.wasm.wasm:wasm-function[723]:0x57d7e\n    at http://127.0.0.1:8088/vendor/ammo.wasm.wasm:wasm-function[739]:0x59364\n    at http://127.0.0.1:8088/vendor/ammo.wasm.wasm:wasm-function[1113]:0x80153\n    at g._emscripten_bind_btBvhTriangleMeshShape_btBvhTriangleMeshShape_3 (http://127.0.0.1:8088/vendor/ammo.wasm.js:84:445)\n    at new aw (http://127.0.0.1:8088/vendor/ammo.wasm.js:455:146)\n    at http://127.0.0.1:8088/vendor/aframe-physics-system.js:12217:28\n    at Object.createCollisionShapes (http://127.0.0.1:8088/vendor/aframe-physics-system.js:11805:15)\n    at n._createCollisionShape (http://127.0.0.1:8088/vendor/aframe-physics-system.js:14111:41)"
+  ],
+  "console": []
+}
